@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,UAAU;EACN,WAAW,EAAE,QAAQ;EACrB,GAAG,EAAE,wCAAwC;EAC7C,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,8CAA8C",
+    "sources": [
+        "Le délice des sens.scss"
+    ],
+    "names": [],
+    "file": "Le délice des sens.css"
+}

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(./Polices/Roboto/Roboto-Regular.ttf);
+    font-family: 'Shrikhand';
+    src: url(./Polices/Shrikhand/Shrikhand-Regular.ttf);
+}
+
+.box {
+    box-sizing: border-box; /* Opera/IE 8+ */
+    -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+    -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+ }
+
+$purple: #9356DC;
+$pink: #FF79DA ;
+$green: #99E2D0;
+
+@mixin numbers {
+                position:relative;
+                left: -1.2em;
+                background-color: $purple;
+                text-align: center;
+                line-height: 1.6em;
+                width: 1.5em;
+                height: 1.5em;
+                margin-top: 1em;
+                margin-right: 1em;
+                border: solid 2px $purple;
+                font-size: 0.8em;
+                border-radius: 50%;
+                color: white;
+    
+}
+
+@mixin summary {
+    display: flex;
+    box-sizing: border-box;
+    width: 90%;
+    border: 0px solid grey;
+    box-shadow: 0px 1px 10px rgb(177, 176, 176);
+    border-radius: 1.2em;
+    background-color: rgb(247, 243, 243);
+    margin-bottom: 2em;
+    padding: 0.3em;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+@media screen and (max-width:767px) and (orientation:portrait){
+
+body{
+margin:0%;
+}
+
+header{
+
+    .boxtitle{
+        border: 2px solid white;
+        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        font-family: 'Shrikhand';
+        text-align: center;
+    }
+
+
+
+
+    .boxheader{
+        display: flex;
+        justify-content: center;
+        font-family: 'Roboto';
+        background-color: rgba(128, 128, 128, 0.144);
+            .iconheader{
+                margin-top: 5%;
+                margin-right: 5%;
+            }
+    }
+    
+}
+
+main{
+
+    .boxrestaurants{
+        display:block;
+        text-align: center;
+        font-family: 'Roboto';
+        padding-top: 4%;
+        padding-bottom: 17%;
+        background-color: rgb(247, 243, 243);
+            h2 span{
+                display: block;
+                margin-left: 10%;}
+            p{
+                margin-bottom: 2.5em;
+            }
+            p span{
+                display: block;
+                margin-left: 12%;
+            }
+        .navrestaurants{
+            padding-top: 1em;
+            padding-bottom: 1em;
+            padding-right: 1.5em;
+            padding-left: 1.5em;
+            border: 0px solid grey;
+            background: linear-gradient(to bottom right, $pink, $purple);
+            box-shadow: 0px 1px 10px rgb(177, 176, 176);
+            border-radius: 3em;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+    }
+
+    .boxfunctioning{
+        margin-left: 5%;
+        font-family: 'Roboto';
+    
+        .locaterestaurant{
+            @include summary;
+                &:hover{
+                    background-color:rgba(128, 0, 128, 0.774);
+                }
+            .bordernumber{
+                @include numbers;
+            }
+            i{
+                color:grey;
+                margin-top: 5%;
+                margin-right: 9%;
+
+        }
+    }
+}
+}
+}

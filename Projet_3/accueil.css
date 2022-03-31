@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(./Polices/Roboto/Roboto-Regular.ttf);
+  font-family: 'Shrikhand';
+  src: url(./Polices/Shrikhand/Shrikhand-Regular.ttf);
+}
+
+.box {
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  -moz-box-sizing: border-box;
+  /* Firefox, autres Gecko */
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, autres WebKit */
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  body {
+    margin: 0%;
+  }
+  header .boxtitle {
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 1px 10px #b1b0b0;
+            box-shadow: 0px 1px 10px #b1b0b0;
+    font-family: 'Shrikhand';
+    text-align: center;
+  }
+  header .boxheader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-family: 'Roboto';
+    background-color: rgba(128, 128, 128, 0.144);
+  }
+  header .boxheader .iconheader {
+    margin-top: 5%;
+    margin-right: 5%;
+  }
+  main .boxrestaurants {
+    display: block;
+    text-align: center;
+    font-family: 'Roboto';
+    padding-top: 4%;
+    padding-bottom: 17%;
+    background-color: #f7f3f3;
+  }
+  main .boxrestaurants h2 span {
+    display: block;
+    margin-left: 10%;
+  }
+  main .boxrestaurants p {
+    margin-bottom: 2.5em;
+  }
+  main .boxrestaurants p span {
+    display: block;
+    margin-left: 12%;
+  }
+  main .boxrestaurants .navrestaurants {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    border: 0px solid grey;
+    background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    -webkit-box-shadow: 0px 1px 10px #b1b0b0;
+            box-shadow: 0px 1px 10px #b1b0b0;
+    border-radius: 3em;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-decoration: none;
+  }
+  main .boxfunctioning {
+    margin-left: 5%;
+    font-family: 'Roboto';
+  }
+  main .boxfunctioning .locaterestaurant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 90%;
+    border: 0px solid grey;
+    -webkit-box-shadow: 0px 1px 10px #b1b0b0;
+            box-shadow: 0px 1px 10px #b1b0b0;
+    border-radius: 1.2em;
+    background-color: #f7f3f3;
+    margin-bottom: 2em;
+    padding: 0.3em;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  main .boxfunctioning .locaterestaurant:hover {
+    background-color: rgba(128, 0, 128, 0.774);
+  }
+  main .boxfunctioning .locaterestaurant .bordernumber {
+    position: relative;
+    left: -1.2em;
+    background-color: #9356DC;
+    text-align: center;
+    line-height: 1.6em;
+    width: 1.5em;
+    height: 1.5em;
+    margin-top: 1em;
+    margin-right: 1em;
+    border: solid 2px #9356DC;
+    font-size: 0.8em;
+    border-radius: 50%;
+    color: white;
+  }
+  main .boxfunctioning .locaterestaurant i {
+    color: grey;
+    margin-top: 5%;
+    margin-right: 9%;
+  }
+}
+/*# sourceMappingURL=accueil.css.map */
