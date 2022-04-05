@@ -117,21 +117,160 @@ main{
         margin-left: 5%;
         font-family: 'Roboto';
     
-        .locaterestaurant{
-            @include summary;
-                &:hover{
-                    background-color:rgba(128, 0, 128, 0.774);
-                }
-            .bordernumber{
-                @include numbers;
-            }
-            i{
-                color:grey;
-                margin-top: 5%;
-                margin-right: 9%;
+            .locaterestaurant{
+                    @include summary;
+                        &:hover{
+                            background-color:rgba(128, 0, 128, 0.774);
+                        }
+                    .bordernumber{
+                        @include numbers;
+                    }
+                    i{
+                        color:grey;
+                        margin-top: 5%;
+                        margin-right: 9%;
 
+                     }
+            }   
+
+    }
+    .boxnavrestaurant{
+        background-color: rgb(247, 243, 243);
+        font-family: 'Roboto';
+        padding-top: 2em;
+        padding-bottom: 2em;
+        h2{
+            margin-left: 1.5em;
+            font-size: 1.3em;
         }
     }
+
+    .vignetterestaurant{
+        margin-left: 2em;
+        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        border-radius: 1em;
+        box-sizing: border-box;
+        width: fit-content;
+        margin-bottom: 2em;
+        padding-left: 0em;
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+
+            .new{
+                position: relative;
+                top: -9.5em;
+                margin-left: 14.5em;
+                margin-top: 0em;
+                margin-bottom: 0em;
+                width: fit-content;
+                background-color: $green;
+                border-radius: 0.2em;
+                font-weight: bold;
+                color: #0f8d6e;
+                p{
+                    margin-top: 0em;
+                    margin-bottom: 0em;
+                    border: 2px solid transparent;
+                    font-size: 0.8em;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    padding-top: 0.3em;
+                    padding-bottom: 0.3em;
+                }
+            }
+
+            .imagevignette{
+                width: 20em;
+                height: 10em;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-top-left-radius: 1em;
+                    border-top-right-radius: 1em;
+                }
+            }
+
+            .heart{
+                display: flex;
+                .infosvignette{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 0.7em;
+                    margin-bottom: 0.5em;
+                    margin-left: 0.5em;
+                    p{
+                        margin: 0.1em;
+                    }
+                    span{
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+                }
+                i{
+                    font-size: 1.5em;
+                    margin-left: 5em;
+                    margin-top: 0.7em;
+                }
+
+                .like{
+                    .fa-solid{
+                        color: transparent;
+                        background-clip: text;
+                        background-image: linear-gradient( $purple, $pink);
+                    }
+                }
+                .like i:nth-child(2){
+                    display:none;
+                }
+                
+                .like:hover i:nth-child(1){
+                    display: none;
+                }
+                .like:hover i:nth-child(2){
+                    display: block;
+                }
+            }
+            
+    }
+
+
 }
+
+footer{
+    .boxfooter{
+
+        background-color: rgb(75, 73, 73);
+        padding-top: 1em;
+        padding-bottom: 2em;
+        h2{
+            font-family: 'Shrikhand';
+            color: white;
+            margin-left: 2em;
+            font-size: 1em;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        p{
+            margin-left: 2em;
+            line-height: 0.5em;
+        }
+        i{
+            margin-right: 0.7em;
+            font-size: 0.8em;
+        }
+        .ustensils{
+            margin-left: 0.3em;
+            i{
+                margin-right: 0.8em;
+                margin-left: -0.2em;
+            }
+        }
+    }
 }
 }

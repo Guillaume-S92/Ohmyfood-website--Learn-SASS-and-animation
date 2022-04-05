@@ -119,5 +119,142 @@
     margin-top: 5%;
     margin-right: 9%;
   }
+  main .boxnavrestaurant {
+    background-color: #f7f3f3;
+    font-family: 'Roboto';
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+  main .boxnavrestaurant h2 {
+    margin-left: 1.5em;
+    font-size: 1.3em;
+  }
+  main .vignetterestaurant {
+    margin-left: 2em;
+    -webkit-box-shadow: 0px 1px 10px #b1b0b0;
+            box-shadow: 0px 1px 10px #b1b0b0;
+    border-radius: 1em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 2em;
+    padding-left: 0em;
+  }
+  main .vignetterestaurant a {
+    text-decoration: none;
+    color: black;
+  }
+  main .vignetterestaurant .new {
+    position: relative;
+    top: -9.5em;
+    margin-left: 14.5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background-color: #99E2D0;
+    border-radius: 0.2em;
+    font-weight: bold;
+    color: #0f8d6e;
+  }
+  main .vignetterestaurant .new p {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    border: 2px solid transparent;
+    font-size: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+  }
+  main .vignetterestaurant .imagevignette {
+    width: 20em;
+    height: 10em;
+  }
+  main .vignetterestaurant .imagevignette img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+  }
+  main .vignetterestaurant .heart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .vignetterestaurant .heart .infosvignette {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0.7em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
+  }
+  main .vignetterestaurant .heart .infosvignette p {
+    margin: 0.1em;
+  }
+  main .vignetterestaurant .heart .infosvignette span {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  main .vignetterestaurant .heart i {
+    font-size: 1.5em;
+    margin-left: 5em;
+    margin-top: 0.7em;
+  }
+  main .vignetterestaurant .heart .like .fa-solid {
+    color: transparent;
+    background-clip: text;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background-image: linear-gradient(#9356DC, #FF79DA);
+  }
+  main .vignetterestaurant .heart .like i:nth-child(2) {
+    display: none;
+  }
+  main .vignetterestaurant .heart .like:hover i:nth-child(1) {
+    display: none;
+  }
+  main .vignetterestaurant .heart .like:hover i:nth-child(2) {
+    display: block;
+  }
+  footer .boxfooter {
+    background-color: #4b4949;
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  footer .boxfooter h2 {
+    font-family: 'Shrikhand';
+    color: white;
+    margin-left: 2em;
+    font-size: 1em;
+  }
+  footer .boxfooter a {
+    color: white;
+    text-decoration: none;
+  }
+  footer .boxfooter p {
+    margin-left: 2em;
+    line-height: 0.5em;
+  }
+  footer .boxfooter i {
+    margin-right: 0.7em;
+    font-size: 0.8em;
+  }
+  footer .boxfooter .ustensils {
+    margin-left: 0.3em;
+  }
+  footer .boxfooter .ustensils i {
+    margin-right: 0.8em;
+    margin-left: -0.2em;
+  }
 }
 /*# sourceMappingURL=accueil.css.map */
