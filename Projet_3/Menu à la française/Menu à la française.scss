@@ -1,11 +1,655 @@
 @font-face {
     font-family: 'Roboto';
-    src: url(./Polices/Roboto/Roboto-Regular.ttf);
+    src: url(../Polices/Roboto/Roboto-Regular.ttf);
     font-family: 'Shrikhand';
-    src: url(./Polices/Shrikhand/Shrikhand-Regular.ttf);
+    src: url(../Polices/Shrikhand/Shrikhand-Regular.ttf);
 }
 
 $purple: #9356DC;
 $pink: #FF79DA ;
 $green: #99E2D0;
 
+@mixin bordercommands {
+    position: relative;
+    bottom: -3.7em;
+    margin-left: 7em;
+    margin-top: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+    border: 0px solid grey;
+    background: linear-gradient(to bottom right, $pink, $purple);
+    box-shadow: 0px 1px 10px rgb(177, 176, 176);
+    border-radius: 3em;
+    font-size: 0.9em;
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+
+@mixin menus {
+    border: 2px solid white;
+    box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+    background-color: white;
+    border-radius: 1em;
+    margin-top: 1em;
+    padding-top: 0.5em;
+    .recipe{
+        font-weight: bold;
+    }
+    p{
+        font-family: 'Roboto';
+        line-height: 0em;
+        margin-top: 0.5em;
+        margin-left: 0.5em;
+    }
+    .price{
+        line-height: 0em;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9em;
+        span{
+            font-size: 1em;
+            margin-right: 1em;
+            font-weight: bold;
+        }
+    }
+}
+
+
+@media screen and (min-width:768px){
+
+    @mixin bordercommands {
+        position: relative;
+        bottom: -3.7em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 3.5em;
+        padding-left: 3.5em;
+        border: 0px solid grey;
+        background: linear-gradient(to bottom right, $pink, $purple);
+        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        border-radius: 3em;
+        font-size: 1.1em;
+        width: fit-content;
+        height: fit-content;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-family: 'Roboto';
+    }
+    
+    @mixin menus {
+        border: 2px solid white;
+        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+        background-color: white;
+        border-radius: 1em;
+        margin-top: 1em;
+        padding-top: 0.5em;
+        font-size: 1.1em;
+        width: 28em;
+        .recipe{
+            font-weight: bold;
+        }
+        p{
+            font-family: 'Roboto';
+            line-height: 0em;
+            margin-top: 0.5em;
+            margin-left: 0.5em;
+        }
+        .price{
+            line-height: 0em;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            span{
+                font-size: 1em;
+                margin-right: 1em;
+                font-weight: bold;
+            }
+        }
+    }
+
+    html{
+        font-size: 1vw;
+    }
+
+    body{
+        margin: 0%;
+    }
+        header{
+            .boxheader{
+            display: flex;
+            justify-content: center;
+            height: 4.5em;
+            font-size: 1.5em;
+                h1{
+                    font-family: 'Shrikhand';
+                    margin-left: 2%;
+                }
+                i{
+                    position: relative;
+                    top: 50%;
+                    font-size: 1.4em;
+                }
+            }
+        }
+        main{
+            
+            .boximg{
+                width: 100%;
+                height: 40em;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover ;
+                    object-position: 0% 70%;
+                }
+            }
+
+            .boxmenu{
+            background-color: rgb(247, 243, 243);
+            border: 2px solid transparent ;
+            border-radius: 2em 2em 0 0;
+            position: relative;
+            top: -3.5em;
+            margin-bottom: -3.5em;
+            padding-bottom: 9em;
+
+
+            .restauranttitle{
+                    display: flex;
+                    margin-left: 1em;
+                    margin-top:0em;
+                    margin-bottom: 0em;
+                    h1{
+                        font-family: 'Shrikhand';
+                        font-size: 1.8em;
+                    }
+                    i{
+                        font-size: 1.5em;
+                        margin-top: 1.2em;
+                        margin-left: 2em;
+                        color: black;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                    .like{
+                        .fa-solid{
+                            color: transparent;
+                            background-clip: text;
+                            background-image: linear-gradient( $purple, $pink);
+                        }
+                    }
+                    .like i:nth-child(2){
+                        display:none;
+                    }
+                    
+                    .like:hover i:nth-child(1){
+                        display: none;
+                    }
+                    .like:hover i:nth-child(2){
+                        display: block;
+                    }
+            }
+
+            .boxplats{
+                margin-left: 1em;
+                margin-right: 1em;
+                font-family: 'Roboto';
+                .starter{
+                    margin-top: 3em;
+                    border-bottom: 3px solid $green;
+                    width: 2.5em;
+                    line-height: 0em;
+                    text-transform: uppercase;
+                    font-size: 1.1em;
+                }
+                .flexmenu{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                .bordermenu{
+                    @include menus;
+
+                }
+            }
+                .commands{
+                    @include bordercommands;
+                }
+            
+                .boxcommands{
+                    display: block;
+                    text-align: center;
+                }
+            }
+        }
+        footer{
+            .boxfooter{
+
+                background-color: rgb(75, 73, 73);
+                padding-top: 1em;
+                padding-bottom: 2em;
+                h2{
+                    font-family: 'Shrikhand';
+                    color: white;
+                    margin-left: 2em;
+                    font-size: 1.2em;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+                p{
+                    margin-left: 2em;
+                    line-height: 0.5em;
+                    font-family: 'Roboto';
+                }
+                i{
+                    margin-right: 0.7em;
+                    font-size: 0.8em;
+                }
+                .ustensils{
+                    margin-left: 0.3em;
+                    i{
+                        margin-right: 0.8em;
+                        margin-left: -0.2em;
+                    }
+                }
+            }
+        }
+
+
+}
+
+@media screen and (max-width:767px) and (orientation:portrait){
+
+
+    @mixin bordercommands {
+        position: relative;
+        bottom: -3.7em;
+        margin-left: 7em;
+        margin-top: 4em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 3.5em;
+        padding-left: 3.5em;
+        border: 0px solid grey;
+        background: linear-gradient(to bottom right, $pink, $purple);
+        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        border-radius: 3em;
+        font-size: 0.9em;
+        width: fit-content;
+        height: fit-content;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-family: 'Roboto';
+    }
+    
+    @mixin menus {
+        border: 2px solid white;
+        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+        background-color: white;
+        border-radius: 1em;
+        margin-top: 1em;
+        padding-top: 0.5em;
+        .recipe{
+            font-weight: bold;
+        }
+        p{
+            font-family: 'Roboto';
+            line-height: 0em;
+            margin-top: 0.5em;
+            margin-left: 0.5em;
+        }
+        .price{
+            line-height: 0em;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            span{
+                font-size: 1em;
+                margin-right: 1em;
+                font-weight: bold;
+            }
+        }
+    }
+
+    body{
+        margin: 0%;
+    }
+        header{
+            .boxheader{
+            display: flex;
+            height: 4.5em;
+                h1{
+                    font-family: 'Shrikhand';
+                    margin-left: 2em;
+                }
+                i{
+                    margin-top: 1.3em;
+                    margin-left: 1em;
+                    font-size: 1.4em;
+                }
+            }
+        }
+        main{
+            
+            .boximg{
+                width: 100%;
+                height: 17em;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .boxmenu{
+            background-color: rgb(247, 243, 243);
+            border: 2px solid transparent ;
+            border-radius: 2em 2em 0 0;
+            position: relative;
+            top: -3.5em;
+            margin-bottom: -3.5em;
+            padding-bottom: 9em;
+
+
+            .restauranttitle{
+                    display: flex;
+                    margin-left: 1em;
+                    margin-top:0em;
+                    margin-bottom: 0em;
+                    h1{
+                        font-family: 'Shrikhand';
+                        font-size: 1.8em;
+                    }
+                    i{
+                        font-size: 1.5em;
+                        margin-top: 1.2em;
+                        margin-left: 3em;
+                        
+                    }
+                    a{
+                        color: black;
+                    }
+                    .like{
+                        .fa-solid{
+                            color: transparent;
+                            background-clip: text;
+                            background-image: linear-gradient( $purple, $pink);
+                        }
+                    }
+                    .like i:nth-child(2){
+                        display:none;
+                    }
+                    
+                    .like:hover i:nth-child(1){
+                        display: none;
+                    }
+                    .like:hover i:nth-child(2){
+                        display: block;
+                    }
+            }
+
+            .boxplats{
+                margin-left: 1em;
+                margin-right: 1em;
+                font-family: 'Roboto';
+                .starter{
+                    margin-top: 3em;
+                    border-bottom: 3px solid $green;
+                    width: 2.5em;
+                    line-height: 0em;
+                    text-transform: uppercase;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                .bordermenu{
+                    @include menus;
+                }
+            }
+                .commands{
+                    @include bordercommands;
+                }
+            }
+        }
+        footer{
+            .boxfooter{
+
+                background-color: rgb(75, 73, 73);
+                padding-top: 1em;
+                padding-bottom: 2em;
+                h2{
+                    font-family: 'Shrikhand';
+                    color: white;
+                    margin-left: 2em;
+                    font-size: 1.2em;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+                p{
+                    margin-left: 2em;
+                    line-height: 0.5em;
+                    font-family: 'Roboto';
+                }
+                i{
+                    margin-right: 0.7em;
+                    font-size: 0.8em;
+                }
+                .ustensils{
+                    margin-left: 0.3em;
+                    i{
+                        margin-right: 0.8em;
+                        margin-left: -0.2em;
+                    }
+                }
+            }
+        }
+}
+
+@media screen and (max-width:767px) and (orientation:landscape){
+    @mixin bordercommands {
+        position: relative;
+        bottom: -3.7em;
+        margin-top: 4em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 3.5em;
+        padding-left: 3.5em;
+        border: 0px solid grey;
+        background: linear-gradient(to bottom right, $pink, $purple);
+        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        border-radius: 3em;
+        font-size: 0.9em;
+        width: fit-content;
+        height: fit-content;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-family: 'Roboto';
+    }
+    
+    @mixin menus {
+        border: 2px solid white;
+        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+        background-color: white;
+        border-radius: 1em;
+        margin-top: 1em;
+        padding-top: 0.5em;
+        width: 100%;
+        .recipe{
+            font-weight: bold;
+        }
+        p{
+            font-family: 'Roboto';
+            line-height: 0em;
+            margin-top: 0.5em;
+            margin-left: 0.5em;
+        }
+        .price{
+            line-height: 0em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 0.9em;
+            span{
+                font-size: 1em;
+                margin-right: 1em;
+                font-weight: bold;
+            }
+        }
+    }
+
+    body{
+        margin: 0%;
+    }
+        header{
+            .boxheader{
+            display: flex;
+            justify-content: center;
+            height: 4.5em;
+                h1{
+                    font-family: 'Shrikhand';
+                }
+                i{
+                    margin-top: 1.3em;
+                    font-size: 1.4em;
+                    margin-right: 1em;
+                }
+            }
+        }
+        main{
+            
+            .boximg{
+                width: 100%;
+                img{
+                    width: 100%;
+                    height: fit-content;
+                    object-fit: cover;
+                }
+            }
+
+            .boxmenu{
+            background-color: rgb(247, 243, 243);
+            border: 2px solid transparent ;
+            border-radius: 2em 2em 0 0;
+            position: relative;
+            top: -5.5em;
+            margin-bottom: -5.5em;
+            padding-bottom: 9em;
+
+
+            .restauranttitle{
+                    display: flex;
+                    margin-left: 1em;
+                    margin-top:0em;
+                    margin-bottom: 0em;
+                    h1{
+                        font-family: 'Shrikhand';
+                        font-size: 1.8em;
+                    }
+                    i{
+                        font-size: 1.5em;
+                        margin-top: 1.2em;
+                        margin-left: 3em;
+                    }
+                    a{
+                        color: black;
+                    }
+                    .like{
+                        .fa-solid{
+                            color: transparent;
+                            background-clip: text;
+                            background-image: linear-gradient( $purple, $pink);
+                        }
+                    }
+                    .like i:nth-child(2){
+                        display:none;
+                    }
+                    
+                    .like:hover i:nth-child(1){
+                        display: none;
+                    }
+                    .like:hover i:nth-child(2){
+                        display: block;
+                    }
+            }
+
+            .boxplats{
+                margin-left: 1em;
+                margin-right: 1em;
+                font-family: 'Roboto';
+                .starter{
+                    margin-top: 3em;
+                    border-bottom: 3px solid $green;
+                    width: 2.5em;
+                    line-height: 0em;
+                        text-transform: uppercase;
+                }
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+                .bordermenu{
+                    @include menus;
+                }
+            }
+                .boxcommands{
+                    display: flex;
+                    justify-content: center;
+                    .commands{
+                        @include bordercommands;
+                    }
+                }
+            }   
+        }
+        footer{
+            .boxfooter{
+
+                background-color: rgb(75, 73, 73);
+                padding-top: 1em;
+                padding-bottom: 2em;
+                h2{
+                    font-family: 'Shrikhand';
+                    color: white;
+                    margin-left: 2em;
+                    font-size: 1.2em;
+                }
+                a{
+                    color: white;
+                    text-decoration: none;
+                }
+                p{
+                    margin-left: 2em;
+                    line-height: 0.5em;
+                    font-family: 'Roboto';
+                }
+                i{
+                    margin-right: 0.7em;
+                    font-size: 0.8em;
+                }
+                .ustensils{
+                    margin-left: 0.3em;
+                    i{
+                        margin-right: 0.8em;
+                        margin-left: -0.2em;
+                    }
+                }
+            }
+        }
+}

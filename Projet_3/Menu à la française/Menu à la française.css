@@ -1,7 +1,589 @@
 @font-face {
   font-family: 'Roboto';
-  src: url(./Polices/Roboto/Roboto-Regular.ttf);
+  src: url(../Polices/Roboto/Roboto-Regular.ttf);
   font-family: 'Shrikhand';
-  src: url(./Polices/Shrikhand/Shrikhand-Regular.ttf);
+  src: url(../Polices/Shrikhand/Shrikhand-Regular.ttf);
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1vw;
+  }
+  body {
+    margin: 0%;
+  }
+  header .boxheader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 4.5em;
+    font-size: 1.5em;
+  }
+  header .boxheader h1 {
+    font-family: 'Shrikhand';
+    margin-left: 2%;
+  }
+  header .boxheader i {
+    position: relative;
+    top: 50%;
+    font-size: 1.4em;
+  }
+  main .boximg {
+    width: 100%;
+    height: 40em;
+  }
+  main .boximg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 0% 70%;
+       object-position: 0% 70%;
+  }
+  main .boxmenu {
+    background-color: #f7f3f3;
+    border: 2px solid transparent;
+    border-radius: 2em 2em 0 0;
+    position: relative;
+    top: -3.5em;
+    margin-bottom: -3.5em;
+    padding-bottom: 9em;
+  }
+  main .boxmenu .restauranttitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  main .boxmenu .restauranttitle h1 {
+    font-family: 'Shrikhand';
+    font-size: 1.8em;
+  }
+  main .boxmenu .restauranttitle i {
+    font-size: 1.5em;
+    margin-top: 1.2em;
+    margin-left: 2em;
+    color: black;
+  }
+  main .boxmenu .restauranttitle a {
+    text-decoration: none;
+  }
+  main .boxmenu .restauranttitle .like .fa-solid {
+    color: transparent;
+    background-clip: text;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background-image: linear-gradient(#9356DC, #FF79DA);
+  }
+  main .boxmenu .restauranttitle .like i:nth-child(2) {
+    display: none;
+  }
+  main .boxmenu .restauranttitle .like:hover i:nth-child(1) {
+    display: none;
+  }
+  main .boxmenu .restauranttitle .like:hover i:nth-child(2) {
+    display: block;
+  }
+  main .boxmenu .boxplats {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-family: 'Roboto';
+  }
+  main .boxmenu .boxplats .starter {
+    margin-top: 3em;
+    border-bottom: 3px solid #99E2D0;
+    width: 2.5em;
+    line-height: 0em;
+    text-transform: uppercase;
+    font-size: 1.1em;
+  }
+  main .boxmenu .boxplats .flexmenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  main .boxmenu .boxplats a {
+    text-decoration: none;
+    color: black;
+  }
+  main .boxmenu .boxplats .bordermenu {
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+            box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+    background-color: white;
+    border-radius: 1em;
+    margin-top: 1em;
+    padding-top: 0.5em;
+    font-size: 1.1em;
+    width: 28em;
+  }
+  main .boxmenu .boxplats .bordermenu .recipe {
+    font-weight: bold;
+  }
+  main .boxmenu .boxplats .bordermenu p {
+    font-family: 'Roboto';
+    line-height: 0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
+  main .boxmenu .boxplats .bordermenu .price {
+    line-height: 0em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 0.9em;
+  }
+  main .boxmenu .boxplats .bordermenu .price span {
+    font-size: 1em;
+    margin-right: 1em;
+    font-weight: bold;
+  }
+  main .boxmenu .commands {
+    position: relative;
+    bottom: -3.7em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+    border: 0px solid grey;
+    background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    -webkit-box-shadow: 0px 1px 10px #b1b0b0;
+            box-shadow: 0px 1px 10px #b1b0b0;
+    border-radius: 3em;
+    font-size: 1.1em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto';
+  }
+  main .boxmenu .boxcommands {
+    display: block;
+    text-align: center;
+  }
+  footer .boxfooter {
+    background-color: #4b4949;
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  footer .boxfooter h2 {
+    font-family: 'Shrikhand';
+    color: white;
+    margin-left: 2em;
+    font-size: 1.2em;
+  }
+  footer .boxfooter a {
+    color: white;
+    text-decoration: none;
+  }
+  footer .boxfooter p {
+    margin-left: 2em;
+    line-height: 0.5em;
+    font-family: 'Roboto';
+  }
+  footer .boxfooter i {
+    margin-right: 0.7em;
+    font-size: 0.8em;
+  }
+  footer .boxfooter .ustensils {
+    margin-left: 0.3em;
+  }
+  footer .boxfooter .ustensils i {
+    margin-right: 0.8em;
+    margin-left: -0.2em;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: portrait) {
+  body {
+    margin: 0%;
+  }
+  header .boxheader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 4.5em;
+  }
+  header .boxheader h1 {
+    font-family: 'Shrikhand';
+    margin-left: 2em;
+  }
+  header .boxheader i {
+    margin-top: 1.3em;
+    margin-left: 1em;
+    font-size: 1.4em;
+  }
+  main .boximg {
+    width: 100%;
+    height: 17em;
+  }
+  main .boximg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .boxmenu {
+    background-color: #f7f3f3;
+    border: 2px solid transparent;
+    border-radius: 2em 2em 0 0;
+    position: relative;
+    top: -3.5em;
+    margin-bottom: -3.5em;
+    padding-bottom: 9em;
+  }
+  main .boxmenu .restauranttitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  main .boxmenu .restauranttitle h1 {
+    font-family: 'Shrikhand';
+    font-size: 1.8em;
+  }
+  main .boxmenu .restauranttitle i {
+    font-size: 1.5em;
+    margin-top: 1.2em;
+    margin-left: 3em;
+  }
+  main .boxmenu .restauranttitle a {
+    color: black;
+  }
+  main .boxmenu .restauranttitle .like .fa-solid {
+    color: transparent;
+    background-clip: text;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background-image: linear-gradient(#9356DC, #FF79DA);
+  }
+  main .boxmenu .restauranttitle .like i:nth-child(2) {
+    display: none;
+  }
+  main .boxmenu .restauranttitle .like:hover i:nth-child(1) {
+    display: none;
+  }
+  main .boxmenu .restauranttitle .like:hover i:nth-child(2) {
+    display: block;
+  }
+  main .boxmenu .boxplats {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-family: 'Roboto';
+  }
+  main .boxmenu .boxplats .starter {
+    margin-top: 3em;
+    border-bottom: 3px solid #99E2D0;
+    width: 2.5em;
+    line-height: 0em;
+    text-transform: uppercase;
+  }
+  main .boxmenu .boxplats a {
+    text-decoration: none;
+    color: black;
+  }
+  main .boxmenu .boxplats .bordermenu {
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+            box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+    background-color: white;
+    border-radius: 1em;
+    margin-top: 1em;
+    padding-top: 0.5em;
+  }
+  main .boxmenu .boxplats .bordermenu .recipe {
+    font-weight: bold;
+  }
+  main .boxmenu .boxplats .bordermenu p {
+    font-family: 'Roboto';
+    line-height: 0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
+  main .boxmenu .boxplats .bordermenu .price {
+    line-height: 0em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 0.9em;
+  }
+  main .boxmenu .boxplats .bordermenu .price span {
+    font-size: 1em;
+    margin-right: 1em;
+    font-weight: bold;
+  }
+  main .boxmenu .commands {
+    position: relative;
+    bottom: -3.7em;
+    margin-left: 7em;
+    margin-top: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+    border: 0px solid grey;
+    background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    -webkit-box-shadow: 0px 1px 10px #b1b0b0;
+            box-shadow: 0px 1px 10px #b1b0b0;
+    border-radius: 3em;
+    font-size: 0.9em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto';
+  }
+  footer .boxfooter {
+    background-color: #4b4949;
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  footer .boxfooter h2 {
+    font-family: 'Shrikhand';
+    color: white;
+    margin-left: 2em;
+    font-size: 1.2em;
+  }
+  footer .boxfooter a {
+    color: white;
+    text-decoration: none;
+  }
+  footer .boxfooter p {
+    margin-left: 2em;
+    line-height: 0.5em;
+    font-family: 'Roboto';
+  }
+  footer .boxfooter i {
+    margin-right: 0.7em;
+    font-size: 0.8em;
+  }
+  footer .boxfooter .ustensils {
+    margin-left: 0.3em;
+  }
+  footer .boxfooter .ustensils i {
+    margin-right: 0.8em;
+    margin-left: -0.2em;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  body {
+    margin: 0%;
+  }
+  header .boxheader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 4.5em;
+  }
+  header .boxheader h1 {
+    font-family: 'Shrikhand';
+  }
+  header .boxheader i {
+    margin-top: 1.3em;
+    font-size: 1.4em;
+    margin-right: 1em;
+  }
+  main .boximg {
+    width: 100%;
+  }
+  main .boximg img {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main .boxmenu {
+    background-color: #f7f3f3;
+    border: 2px solid transparent;
+    border-radius: 2em 2em 0 0;
+    position: relative;
+    top: -5.5em;
+    margin-bottom: -5.5em;
+    padding-bottom: 9em;
+  }
+  main .boxmenu .restauranttitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+  }
+  main .boxmenu .restauranttitle h1 {
+    font-family: 'Shrikhand';
+    font-size: 1.8em;
+  }
+  main .boxmenu .restauranttitle i {
+    font-size: 1.5em;
+    margin-top: 1.2em;
+    margin-left: 3em;
+  }
+  main .boxmenu .restauranttitle a {
+    color: black;
+  }
+  main .boxmenu .restauranttitle .like .fa-solid {
+    color: transparent;
+    background-clip: text;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+    background-image: linear-gradient(#9356DC, #FF79DA);
+  }
+  main .boxmenu .restauranttitle .like i:nth-child(2) {
+    display: none;
+  }
+  main .boxmenu .restauranttitle .like:hover i:nth-child(1) {
+    display: none;
+  }
+  main .boxmenu .restauranttitle .like:hover i:nth-child(2) {
+    display: block;
+  }
+  main .boxmenu .boxplats {
+    margin-left: 1em;
+    margin-right: 1em;
+    font-family: 'Roboto';
+  }
+  main .boxmenu .boxplats .starter {
+    margin-top: 3em;
+    border-bottom: 3px solid #99E2D0;
+    width: 2.5em;
+    line-height: 0em;
+    text-transform: uppercase;
+  }
+  main .boxmenu .boxplats a {
+    text-decoration: none;
+    color: black;
+  }
+  main .boxmenu .boxplats .bordermenu {
+    border: 2px solid white;
+    -webkit-box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+            box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+    background-color: white;
+    border-radius: 1em;
+    margin-top: 1em;
+    padding-top: 0.5em;
+    width: 100%;
+  }
+  main .boxmenu .boxplats .bordermenu .recipe {
+    font-weight: bold;
+  }
+  main .boxmenu .boxplats .bordermenu p {
+    font-family: 'Roboto';
+    line-height: 0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
+  main .boxmenu .boxplats .bordermenu .price {
+    line-height: 0em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 0.9em;
+  }
+  main .boxmenu .boxplats .bordermenu .price span {
+    font-size: 1em;
+    margin-right: 1em;
+    font-weight: bold;
+  }
+  main .boxmenu .boxcommands {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .boxmenu .boxcommands .commands {
+    position: relative;
+    bottom: -3.7em;
+    margin-top: 4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 3.5em;
+    padding-left: 3.5em;
+    border: 0px solid grey;
+    background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    -webkit-box-shadow: 0px 1px 10px #b1b0b0;
+            box-shadow: 0px 1px 10px #b1b0b0;
+    border-radius: 3em;
+    font-size: 0.9em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Roboto';
+  }
+  footer .boxfooter {
+    background-color: #4b4949;
+    padding-top: 1em;
+    padding-bottom: 2em;
+  }
+  footer .boxfooter h2 {
+    font-family: 'Shrikhand';
+    color: white;
+    margin-left: 2em;
+    font-size: 1.2em;
+  }
+  footer .boxfooter a {
+    color: white;
+    text-decoration: none;
+  }
+  footer .boxfooter p {
+    margin-left: 2em;
+    line-height: 0.5em;
+    font-family: 'Roboto';
+  }
+  footer .boxfooter i {
+    margin-right: 0.7em;
+    font-size: 0.8em;
+  }
+  footer .boxfooter .ustensils {
+    margin-left: 0.3em;
+  }
+  footer .boxfooter .ustensils i {
+    margin-right: 0.8em;
+    margin-left: -0.2em;
+  }
 }
 /*# sourceMappingURL=Menu à la française.css.map */
