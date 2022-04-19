@@ -83,33 +83,47 @@ $green: #99E2D0;
     }
     
     @mixin menus {
-        border: 2px solid white;
+        display: flex;
+        justify-content: space-between;
         box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
         background-color: white;
         border-radius: 1em;
         margin-top: 1em;
-        padding-top: 0.5em;
         font-size: 1.1em;
         width: 28em;
-        .recipe{
+        height: fit-content;
+        span{
             font-weight: bold;
         }
-        p{
+        p{  
+            padding-top: 0.5em;
             font-family: 'Roboto';
             line-height: 0em;
             margin-top: 0.5em;
             margin-left: 0.5em;
         }
         .price{
+            font-weight: bold;
+            margin-top: 2.5em;
+            margin-right: 1.2em;
+            padding-top: 0.5em;
             line-height: 0em;
-            display: flex;
-            justify-content: space-between;
             font-size: 0.9em;
-            span{
-                font-size: 1em;
-                margin-right: 1em;
-               
-                font-weight: bold;
+        }
+        .checkicon{
+            display: none;
+        }
+        &:hover{
+            .checkicon{
+                background-color: $green;
+                color:white;
+                display: inline-block;
+                position: relative;
+                border:0.9em solid #99E2D0;
+                font-size: 1.2em;
+                border-radius: 0em 0.7em 0.7em 0em;
+                margin-top: 0em;
+                
             }
         }
     }
@@ -147,7 +161,7 @@ $green: #99E2D0;
                     width: 100%;
                     height: 100%;
                     object-fit: cover ;
-                    object-position: 0% 60%;}
+                    object-position: 0% 70%;}
             }
 
             .boxmenu{
@@ -173,7 +187,7 @@ $green: #99E2D0;
                         font-size: 1.5em;
                         margin-top: 1.2em;
                         margin-left: 2em;
-                        color:black;
+                        color: black;
                     }
                     a{
                         text-decoration: none;
@@ -272,6 +286,73 @@ $green: #99E2D0;
 }
 
 @media screen and (max-width:767px) and (orientation:portrait){
+
+    @mixin bordercommands {
+        position: relative;
+        bottom: -3.7em;
+        margin-left: 7em;
+        margin-top: 4em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 3.5em;
+        padding-left: 3.5em;
+        border: 0px solid grey;
+        background: linear-gradient(to bottom right, $pink, $purple);
+        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        border-radius: 3em;
+        font-size: 0.9em;
+        width: fit-content;
+        height: fit-content;
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        font-family: 'Roboto';
+    }
+    
+    @mixin menus {
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+        background-color: white;
+        border-radius: 1em;
+        margin-top: 1em;
+        height: fit-content;
+        span{
+            font-weight: bold;
+        }
+        p{  
+            padding-top: 0.5em;
+            font-family: 'Roboto';
+            line-height: 0em;
+            margin-top: 0.5em;
+            margin-left: 0.5em;
+            font-size: 0.9em;
+        }
+        .price{
+            font-weight: bold;
+            margin-top: 2.2em;
+            margin-right: 1.2em;
+            padding-top: 0.5em;
+            line-height: 0em;
+            font-size: 0.8em;
+        }
+        .checkicon{
+            display: none;
+        }
+        &:hover{
+            .checkicon{
+                background-color: $green;
+                color:white;
+                display: inline-block;
+                position: relative;
+                border:1em solid #99E2D0;
+                font-size: 1.2em;
+                border-radius: 0em 0.7em 0.7em 0em;
+                margin-top: 0em;
+                
+            }
+        }
+    }
 
     body{
         margin: 0%;
@@ -433,32 +514,47 @@ $green: #99E2D0;
     }
     
     @mixin menus {
-        border: 2px solid white;
+        display: flex;
+        justify-content: space-between;
         box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
         background-color: white;
         border-radius: 1em;
         margin-top: 1em;
-        padding-top: 0.5em;
-        width: 100%;
-        .recipe{
+        font-size: 1.1em;
+        width: 28em;
+        height: fit-content;
+        span{
             font-weight: bold;
         }
-        p{
+        p{  
+            padding-top: 0.5em;
             font-family: 'Roboto';
             line-height: 0em;
             margin-top: 0.5em;
             margin-left: 0.5em;
         }
         .price{
+            font-weight: bold;
+            margin-top: 2.5em;
+            margin-right: 1.2em;
+            padding-top: 0.5em;
             line-height: 0em;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
             font-size: 0.9em;
-            span{
-                font-size: 1em;
-                margin-right: 1em;
-                font-weight: bold;
+        }
+        .checkicon{
+            display: none;
+        }
+        &:hover{
+            .checkicon{
+                background-color: $green;
+                color:white;
+                display: inline-block;
+                position: relative;
+                border:1em solid #99E2D0;
+                font-size: 1.2em;
+                border-radius: 0em 0.7em 0.7em 0em;
+                margin-top: 0em;
+                
             }
         }
     }

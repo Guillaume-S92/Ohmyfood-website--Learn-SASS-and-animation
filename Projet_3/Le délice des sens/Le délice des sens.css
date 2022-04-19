@@ -114,39 +114,53 @@
     color: black;
   }
   main .boxmenu .boxplats .bordermenu {
-    border: 2px solid white;
-    -webkit-box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-    background-color: white;
-    border-radius: 1em;
-    margin-top: 1em;
-    padding-top: 0.5em;
-    font-size: 1.1em;
-    width: 28em;
-  }
-  main .boxmenu .boxplats .bordermenu .recipe {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu p {
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu .price {
-    line-height: 0em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+            box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+    background-color: white;
+    border-radius: 1em;
+    margin-top: 1em;
+    font-size: 1.1em;
+    width: 28em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .boxmenu .boxplats .bordermenu span {
+    font-weight: bold;
+  }
+  main .boxmenu .boxplats .bordermenu p {
+    padding-top: 0.5em;
+    font-family: 'Roboto';
+    line-height: 0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+  }
+  main .boxmenu .boxplats .bordermenu .price {
+    font-weight: bold;
+    margin-top: 2.5em;
+    margin-right: 1.2em;
+    padding-top: 0.5em;
+    line-height: 0em;
     font-size: 0.9em;
   }
-  main .boxmenu .boxplats .bordermenu .price span {
-    font-size: 1em;
-    margin-right: 1em;
-    font-weight: bold;
+  main .boxmenu .boxplats .bordermenu .checkicon {
+    display: none;
+  }
+  main .boxmenu .boxplats .bordermenu:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    border: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
   }
   main .boxmenu .commands {
     position: relative;
@@ -301,37 +315,52 @@
     color: black;
   }
   main .boxmenu .boxplats .bordermenu {
-    border: 2px solid white;
-    -webkit-box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-    background-color: white;
-    border-radius: 1em;
-    margin-top: 1em;
-    padding-top: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu .recipe {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu p {
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu .price {
-    line-height: 0em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+            box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
+    background-color: white;
+    border-radius: 1em;
+    margin-top: 1em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  main .boxmenu .boxplats .bordermenu span {
+    font-weight: bold;
+  }
+  main .boxmenu .boxplats .bordermenu p {
+    padding-top: 0.5em;
+    font-family: 'Roboto';
+    line-height: 0em;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
     font-size: 0.9em;
   }
-  main .boxmenu .boxplats .bordermenu .price span {
-    font-size: 1em;
-    margin-right: 1em;
+  main .boxmenu .boxplats .bordermenu .price {
     font-weight: bold;
+    margin-top: 2.5em;
+    margin-right: 1.2em;
+    padding-top: 0.5em;
+    line-height: 0em;
+    font-size: 0.8em;
+  }
+  main .boxmenu .boxplats .bordermenu .checkicon {
+    display: none;
+  }
+  main .boxmenu .boxplats .bordermenu:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    border: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
   }
   main .boxmenu .commands {
     position: relative;
@@ -486,40 +515,53 @@
     color: black;
   }
   main .boxmenu .boxplats .bordermenu {
-    border: 2px solid white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
     background-color: white;
     border-radius: 1em;
     margin-top: 1em;
-    padding-top: 0.5em;
-    width: 100%;
+    font-size: 1.1em;
+    width: 28em;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
-  main .boxmenu .boxplats .bordermenu .recipe {
+  main .boxmenu .boxplats .bordermenu span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu p {
+    padding-top: 0.5em;
     font-family: 'Roboto';
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
   }
   main .boxmenu .boxplats .bordermenu .price {
+    font-weight: bold;
+    margin-top: 2.5em;
+    margin-right: 1.2em;
+    padding-top: 0.5em;
     line-height: 0em;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     font-size: 0.9em;
   }
-  main .boxmenu .boxplats .bordermenu .price span {
-    font-size: 1em;
-    margin-right: 1em;
-    font-weight: bold;
+  main .boxmenu .boxplats .bordermenu .checkicon {
+    display: none;
+  }
+  main .boxmenu .boxplats .bordermenu:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    border: 1em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
   }
   main .boxmenu .boxcommands {
     display: -webkit-box;
