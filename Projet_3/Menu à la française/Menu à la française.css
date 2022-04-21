@@ -131,7 +131,7 @@
     height: -moz-fit-content;
     height: fit-content;
   }
-  main .boxmenu .boxplats .bordermenu span {
+  main .boxmenu .boxplats .bordermenu .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu p {
@@ -141,7 +141,12 @@
     margin-top: 0.5em;
     margin-left: 0.5em;
   }
-  main .boxmenu .boxplats .bordermenu .price {
+  main .boxmenu .boxplats .bordermenu .boxicon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .boxmenu .boxplats .bordermenu .boxicon .price {
     font-weight: bold;
     margin-top: 2.5em;
     margin-right: 1.2em;
@@ -149,7 +154,7 @@
     line-height: 0em;
     font-size: 0.9em;
   }
-  main .boxmenu .boxplats .bordermenu .checkicon {
+  main .boxmenu .boxplats .bordermenu .boxicon .checkicon {
     -webkit-transition: -webkit-transform 400ms ease-in-out;
     transition: -webkit-transform 400ms ease-in-out;
     transition: transform 400ms ease-in-out;
@@ -159,11 +164,14 @@
     -webkit-transform-origin: right;
             transform-origin: right;
   }
-  main .boxmenu .boxplats .bordermenu .checkicon i {
+  main .boxmenu .boxplats .bordermenu .boxicon .checkicon i {
+    color: white;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
+    position: relative;
+    left: 1.5em;
   }
-  main .boxmenu .boxplats .bordermenu:hover .checkicon {
+  main .boxmenu .boxplats .bordermenu .boxicon:hover .checkicon {
     background-color: #99E2D0;
     color: white;
     display: inline-block;
@@ -175,13 +183,13 @@
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  main .boxmenu .boxplats .bordermenu:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  main .boxmenu .boxplats .bordermenu .boxicon:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
   }
   main .boxmenu .commands {
     position: relative;
@@ -362,8 +370,15 @@
     margin-top: 0.5em;
     margin-left: 0.5em;
     font-size: 0.9em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
-  main .boxmenu .boxplats .bordermenu .price {
+  main .boxmenu .boxplats .bordermenu .boxicon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .boxmenu .boxplats .bordermenu .boxicon .price {
     font-weight: bold;
     margin-top: 2.5em;
     margin-right: 1.2em;
@@ -371,7 +386,7 @@
     line-height: 0em;
     font-size: 0.8em;
   }
-  main .boxmenu .boxplats .bordermenu .checkicon {
+  main .boxmenu .boxplats .bordermenu .boxicon .checkicon {
     -webkit-transition: -webkit-transform 400ms ease-in-out;
     transition: -webkit-transform 400ms ease-in-out;
     transition: transform 400ms ease-in-out;
@@ -381,11 +396,11 @@
     -webkit-transform-origin: right;
             transform-origin: right;
   }
-  main .boxmenu .boxplats .bordermenu .checkicon i {
+  main .boxmenu .boxplats .bordermenu .boxicon .checkicon i {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
   }
-  main .boxmenu .boxplats .bordermenu:hover .checkicon {
+  main .boxmenu .boxplats .bordermenu .boxicon:hover .checkicon {
     background-color: #99E2D0;
     color: white;
     display: inline-block;
@@ -397,7 +412,7 @@
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  main .boxmenu .boxplats .bordermenu:hover .checkicon i {
+  main .boxmenu .boxplats .bordermenu .boxicon:hover .checkicon i {
     -webkit-transform: scaleX(1) rotate(360deg);
             transform: scaleX(1) rotate(360deg);
     -webkit-transition: -webkit-transform 400ms ease-in-out;
@@ -585,7 +600,12 @@
     margin-top: 0.5em;
     margin-left: 0.5em;
   }
-  main .boxmenu .boxplats .bordermenu .price {
+  main .boxmenu .boxplats .bordermenu .boxicon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .boxmenu .boxplats .bordermenu .boxicon .price {
     font-weight: bold;
     margin-top: 2.5em;
     margin-right: 1.2em;
@@ -593,18 +613,39 @@
     line-height: 0em;
     font-size: 0.9em;
   }
-  main .boxmenu .boxplats .bordermenu .checkicon {
-    display: none;
+  main .boxmenu .boxplats .bordermenu .boxicon .checkicon {
+    -webkit-transition: -webkit-transform 400ms ease-in-out;
+    transition: -webkit-transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
   }
-  main .boxmenu .boxplats .bordermenu:hover .checkicon {
+  main .boxmenu .boxplats .bordermenu .boxicon .checkicon i {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  main .boxmenu .boxplats .bordermenu .boxicon:hover .checkicon {
     background-color: #99E2D0;
     color: white;
     display: inline-block;
     position: relative;
-    border: 1em solid #99E2D0;
+    border: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu .boxicon:hover .checkicon i {
+    -webkit-transform: scaleX(1) rotate(360deg);
+            transform: scaleX(1) rotate(360deg);
+    -webkit-transition: -webkit-transform 400ms ease-in-out;
+    transition: -webkit-transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxcommands {
     display: -webkit-box;

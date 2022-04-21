@@ -93,8 +93,10 @@ $green: #99E2D0;
         font-size: 1.1em;
         width: 28em;
         height: fit-content;
-        span{
-            font-weight: bold;
+        .recipe{
+            span{
+                font-weight: bold;
+            }
         }
         p{  
             padding-top: 0.5em;
@@ -103,41 +105,47 @@ $green: #99E2D0;
             margin-top: 0.5em;
             margin-left: 0.5em;
         }
-        .price{
-            font-weight: bold;
-            margin-top: 2.5em;
-            margin-right: 1.2em;
-            padding-top: 0.5em;
-            line-height: 0em;
-            font-size: 0.9em;
-        }
 
-        .checkicon{
-            transition: transform 400ms ease-in-out;
-            transform: scaleX(0);
-            transform-origin: right;
-            i{
-                transform: scaleX(0);
-            }
-        }
-
-        &:hover{
-            .checkicon{
-                background-color: $green;
-                color:white;
-                display: inline-block;
-                position: relative;
-                border:0.9em solid #99E2D0;
-                font-size: 1.2em;
-                border-radius: 0em 0.7em 0.7em 0em;
-                margin-top: 0em;
-                transform: scaleX(1);
-                i{
-                    transform: scaleX(1) rotate(360deg);
+        .boxicon{
+            display: flex;
+                .price{
+                    font-weight: bold;
+                    margin-top: 2.5em;
+                    margin-right: 1.2em;
+                    padding-top: 0.5em;
+                    line-height: 0em;
+                    font-size: 0.9em;
+                }        
+                .checkicon{
                     transition: transform 400ms ease-in-out;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    i{
+                        color: white;
+                        transform: scaleX(0);
+                        position: relative;
+                        left: 1.5em;
+                    }
+                }
+
+                &:hover{
+                    .checkicon{
+                        background-color: $green;
+                        color:white;
+                        display: inline-block;
+                        position: relative;
+                        border:0.9em solid #99E2D0;
+                        font-size: 1.2em;
+                        border-radius: 0em 0.7em 0.7em 0em;
+                        margin-top: 0em;
+                        transform: scaleX(1);
+                        i{
+                            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+                            transition: transform 400ms linear, 400ms ease-in-out;
+                        }
+                    }
                 }
             }
-        }
     }
 
     html{
@@ -345,40 +353,45 @@ $green: #99E2D0;
             margin-top: 0.5em;
             margin-left: 0.5em;
             font-size: 0.9em;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
-        .price{
-            font-weight: bold;
-            margin-top: 2.5em;
-            margin-right: 1.2em;
-            padding-top: 0.5em;
-            line-height: 0em;
-            font-size: 0.8em;
-        }
-        .checkicon{
-            transition: transform 400ms ease-in-out;
-            transform: scaleX(0);
-            transform-origin: right;
-            i{
-                transform: scaleX(0);
-            }
-        }
-
-        &:hover{
-            .checkicon{
-                background-color: $green;
-                color:white;
-                display: inline-block;
-                position: relative;
-                border:0.9em solid #99E2D0;
-                font-size: 1.2em;
-                border-radius: 0em 0.7em 0.7em 0em;
-                margin-top: 0em;
-                transform: scaleX(1);
-                i{
-                    transform: scaleX(1) rotate(360deg);
+        .boxicon{
+            display: flex;
+                .price{
+                    font-weight: bold;
+                    margin-top: 2.5em;
+                    margin-right: 1.2em;
+                    padding-top: 0.5em;
+                    line-height: 0em;
+                    font-size: 0.8em;
+                }    
+                .checkicon{
                     transition: transform 400ms ease-in-out;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    i{
+                        transform: scaleX(0);
+                    }
                 }
-            }
+
+                &:hover{
+                    .checkicon{
+                        background-color: $green;
+                        color:white;
+                        display: inline-block;
+                        position: relative;
+                        border:0.9em solid #99E2D0;
+                        font-size: 1.2em;
+                        border-radius: 0em 0.7em 0.7em 0em;
+                        margin-top: 0em;
+                        transform: scaleX(1);
+                        i{
+                            transform: scaleX(1) rotate(360deg);
+                            transition: transform 400ms ease-in-out;
+                        }
+                    }
+                }
         }
     }
 
@@ -562,30 +575,43 @@ $green: #99E2D0;
             margin-top: 0.5em;
             margin-left: 0.5em;
         }
-        .price{
-            font-weight: bold;
-            margin-top: 2.5em;
-            margin-right: 1.2em;
-            padding-top: 0.5em;
-            line-height: 0em;
-            font-size: 0.9em;
-        }
-        .checkicon{
-            display: none;
-        }
-        &:hover{
-            .checkicon{
-                background-color: $green;
-                color:white;
-                display: inline-block;
-                position: relative;
-                border:1em solid #99E2D0;
-                font-size: 1.2em;
-                border-radius: 0em 0.7em 0.7em 0em;
-                margin-top: 0em;
-                
+        .boxicon{
+            display: flex;
+                        .price{
+                            font-weight: bold;
+                            margin-top: 2.5em;
+                            margin-right: 1.2em;
+                            padding-top: 0.5em;
+                            line-height: 0em;
+                            font-size: 0.9em;
+                        }
+                        .checkicon{
+                            transition: transform 400ms ease-in-out;
+                            transform: scaleX(0);
+                            transform-origin: right;
+                            i{
+                                transform: scaleX(0);
+                            }
+                        }
+        
+                        &:hover{
+                            .checkicon{
+                                background-color: $green;
+                                color:white;
+                                display: inline-block;
+                                position: relative;
+                                border:0.9em solid #99E2D0;
+                                font-size: 1.2em;
+                                border-radius: 0em 0.7em 0.7em 0em;
+                                margin-top: 0em;
+                                transform: scaleX(1);
+                                i{
+                                    transform: scaleX(1) rotate(360deg);
+                                    transition: transform 400ms ease-in-out;
+                                }
+                            }
+                        }
             }
-        }
     }
 
     body{
