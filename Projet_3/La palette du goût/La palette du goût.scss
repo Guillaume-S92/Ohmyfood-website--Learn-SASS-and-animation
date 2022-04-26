@@ -71,7 +71,7 @@ $green: #99E2D0;
         padding-left: 3.5em;
         border: 0px solid grey;
         background: linear-gradient(to bottom right, $pink, $purple);
-        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        box-shadow: 0px 5px 10px rgb(177, 176, 176);
         border-radius: 3em;
         font-size: 1.1em;
         width: fit-content;
@@ -80,19 +80,25 @@ $green: #99E2D0;
         color: white;
         font-weight: bold;
         font-family: 'Roboto';
+        &:hover{
+            background: linear-gradient(to bottom right, #ff79d9dc, #9256dce1);
+            box-shadow: 0px 10px 10px rgb(177, 176, 176);
+        }
     }
     
     @mixin menus {
         display: flex;
         justify-content: space-between;
-        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-        background-color: white;
+        box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
+        background-color: rgba(255, 255, 255, 0.521);
         border-radius: 1em;
         margin-top: 1em;
         font-size: 1.1em;
         width: 28em;
         height: fit-content;
         &:hover{
+            background-color: white;
+            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             .checkicon{
                 background-color: $green;
                 color:white;
@@ -219,6 +225,9 @@ $green: #99E2D0;
                             color: transparent;
                             background-clip: text;
                             background-image: linear-gradient( $purple, $pink);
+                            &:hover{
+                                background-image: linear-gradient( #9256dcc0, #ff79d9c2); 
+                            }
                         }
                     }
                     .like i:nth-child(2){
@@ -253,9 +262,85 @@ $green: #99E2D0;
                     text-decoration: none;
                     color: black;
                 }
-                .bordermenu{
+                .bordermenu1{
                     @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu2{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu3{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu4{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;    
+                }
+                .bordermenu5{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1000ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu6{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu7{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;   
+                }
+                .bordermenu8{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;  
+                }
+                .bordermenu9{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                }
 
+                @keyframes SlideInBottom {
+                    0%{
+                        opacity: 0;
+                    }
+                    40%{
+                        opacity: 0;
+                        transform: translateY(10%);
+                    }
+                    100%{
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
                 }
             }
                 .commands{
@@ -320,7 +405,7 @@ $green: #99E2D0;
         padding-left: 3.5em;
         border: 0px solid grey;
         background: linear-gradient(to bottom right, $pink, $purple);
-        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        box-shadow: 0px 5px 10px rgb(177, 176, 176);
         border-radius: 3em;
         font-size: 0.9em;
         width: fit-content;
@@ -329,6 +414,9 @@ $green: #99E2D0;
         color: white;
         font-weight: bold;
         font-family: 'Roboto';
+        &:hover{
+            background: linear-gradient(to bottom right, #ff79d9dc, #9256dce1);
+            box-shadow: 0px 10px 10px rgb(177, 176, 176);}
     }
     
 
@@ -339,12 +427,14 @@ $green: #99E2D0;
     @mixin menus {
         display: flex;
         justify-content: space-between;
-        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-        background-color: white;
+        box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
+        background-color: rgba(255, 255, 255, 0.521);
         border-radius: 1em;
         margin-top: 1em;
         height: fit-content;
         &:hover{
+                background-color: white;
+                box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             .checkicon{
                 background-color: $green;
                 color:white;
@@ -502,8 +592,85 @@ $green: #99E2D0;
                     text-decoration: none;
                     color: black;
                 }
-                .bordermenu{
+                .bordermenu1{
                     @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu2{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu3{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu4{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;    
+                }
+                .bordermenu5{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1000ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu6{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu7{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;   
+                }
+                .bordermenu8{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;  
+                }
+                .bordermenu9{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                }
+
+                @keyframes SlideInBottom {
+                    0%{
+                        opacity: 0;
+                    }
+                    40%{
+                        opacity: 0;
+                        transform: translateY(10%);
+                    }
+                    100%{
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
                 }
             }
                 .commands{
@@ -558,7 +725,7 @@ $green: #99E2D0;
         padding-left: 3.5em;
         border: 0px solid grey;
         background: linear-gradient(to bottom right, $pink, $purple);
-        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        box-shadow: 0px 5px 10px rgb(177, 176, 176);
         border-radius: 3em;
         font-size: 0.9em;
         width: fit-content;
@@ -567,18 +734,24 @@ $green: #99E2D0;
         color: white;
         font-weight: bold;
         font-family: 'Roboto';
+        &:hover{
+            background: linear-gradient(to bottom right, #ff79d9dc, #9256dce1);
+            box-shadow: 0px 10px 10px rgb(177, 176, 176);}
     }
     
     @mixin menus {
         display: flex;
         justify-content: space-between;
-        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-        background-color: white;
+        box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
+        background-color: rgba(255, 255, 255, 0.521);
         border-radius: 1em;
         margin-top: 1em;
         font-size: 1.1em;
         width: 28em;
         height: fit-content;
+        &:hover{
+            background-color: white;
+            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);}
         span{
             font-weight: bold;
         }
@@ -631,6 +804,8 @@ $green: #99E2D0;
     body{
         margin: 0%;
     }
+
+    
         header{
             .boxheader{
             display: flex;
@@ -683,6 +858,7 @@ $green: #99E2D0;
                     }
                     a{
                         color: black;
+                        text-decoration: none;
                     }
                     .like{
                         .fa-solid{
@@ -718,8 +894,85 @@ $green: #99E2D0;
                     text-decoration: none;
                     color: black;
                 }
-                .bordermenu{
+                .bordermenu1{
                     @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu2{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu3{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu4{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;    
+                }
+                .bordermenu5{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1000ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu6{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu7{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;   
+                }
+                .bordermenu8{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;  
+                }
+                .bordermenu9{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                }
+
+                @keyframes SlideInBottom {
+                    0%{
+                        opacity: 0;
+                    }
+                    40%{
+                        opacity: 0;
+                        transform: translateY(10%);
+                    }
+                    100%{
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
                 }
             }
                 .boxcommands{
