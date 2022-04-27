@@ -45,6 +45,7 @@
   }
   body {
     margin: 0%;
+    height: 100vh;
   }
   header .boxheader {
     display: -webkit-box;
@@ -113,10 +114,6 @@
     background-image: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     background-image: linear-gradient(#9356DC, #FF79DA);
   }
-  main .boxmenu .restauranttitle .like .fa-solid:hover {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#9256dcc0), to(#ff79d9c2));
-    background-image: linear-gradient(#9256dcc0, #ff79d9c2);
-  }
   main .boxmenu .restauranttitle .like i:nth-child(2) {
     display: none;
   }
@@ -125,6 +122,30 @@
   }
   main .boxmenu .restauranttitle .like:hover i:nth-child(2) {
     display: block;
+    -webkit-animation: fill 1s;
+            animation: fill 1s;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+  @-webkit-keyframes fill {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  @keyframes fill {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
   }
   main .boxmenu .boxplats {
     margin-left: 1em;
@@ -187,7 +208,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -252,7 +277,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -317,7 +346,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -382,7 +415,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -447,7 +484,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -512,7 +553,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -577,7 +622,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -642,7 +691,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -707,7 +760,11 @@
     color: white;
     display: inline-block;
     position: relative;
-    border: 0.9em solid #99E2D0;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
     font-size: 1.2em;
     border-radius: 0em 0.7em 0.7em 0em;
     margin-top: 0em;
@@ -818,7 +875,7 @@
   }
   footer .boxfooter p {
     margin-left: 2em;
-    line-height: 0.5em;
+    line-height: 0.7em;
     font-family: 'Roboto';
   }
   footer .boxfooter i {
