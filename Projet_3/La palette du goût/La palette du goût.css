@@ -65,6 +65,7 @@
     position: relative;
     top: 50%;
     font-size: 1.4em;
+    color: black;
   }
   main .boximg {
     width: 100%;
@@ -936,12 +937,12 @@
   }
   header .boxheader h1 {
     font-family: 'Shrikhand';
-    margin-left: 2em;
+    margin-left: 1em;
   }
   header .boxheader i {
     margin-top: 1.3em;
-    margin-left: 1em;
     font-size: 1.4em;
+    color: black;
   }
   main .boximg {
     width: 100%;
@@ -1002,6 +1003,30 @@
   }
   main .boxmenu .restauranttitle .like:hover i:nth-child(2) {
     display: block;
+    -webkit-animation: fill 1s;
+            animation: fill 1s;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+  @-webkit-keyframes fill {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  @keyframes fill {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
   }
   main .boxmenu .boxplats {
     margin-left: 1em;
@@ -1773,6 +1798,40 @@
 }
 
 @media screen and (max-width: 767px) and (orientation: landscape) {
+  .boxicon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .boxicon .price {
+    font-weight: bold;
+    margin-top: 2.5em;
+    margin-right: 1.2em;
+    padding-top: 0.5em;
+    line-height: 0em;
+    font-size: 0.9em;
+    -webkit-transition: -webkit-transform 400ms linear;
+    transition: -webkit-transform 400ms linear;
+    transition: transform 400ms linear;
+    transition: transform 400ms linear, -webkit-transform 400ms linear;
+  }
+  .boxicon .checkicon {
+    -webkit-transition: -webkit-transform 400ms ease-in-out;
+    transition: -webkit-transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+            transform-origin: right;
+  }
+  .boxicon .checkicon i {
+    color: white;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    position: relative;
+    left: 1.5em;
+  }
   body {
     margin: 0%;
   }
@@ -1792,6 +1851,7 @@
     margin-top: 1.3em;
     font-size: 1.4em;
     margin-right: 1em;
+    color: black;
   }
   main .boximg {
     width: 100%;
@@ -1848,6 +1908,30 @@
   }
   main .boxmenu .restauranttitle .like:hover i:nth-child(2) {
     display: block;
+    -webkit-animation: fill 1s;
+            animation: fill 1s;
+    -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+  }
+  @-webkit-keyframes fill {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
+  }
+  @keyframes fill {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+    }
   }
   main .boxmenu .boxplats {
     margin-left: 1em;
@@ -1896,7 +1980,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu1 span {
+  main .boxmenu .boxplats .bordermenu1:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu1:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu1:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu1 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu1 p {
@@ -1905,53 +2017,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu1 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu1 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu1 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu1 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu1 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu1 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxplats .bordermenu2 {
     display: -webkit-box;
@@ -1984,7 +2049,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu2 span {
+  main .boxmenu .boxplats .bordermenu2:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu2:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu2:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu2 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu2 p {
@@ -1993,53 +2086,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu2 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu2 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu2 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu2 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu2 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu2 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxplats .bordermenu3 {
     display: -webkit-box;
@@ -2072,7 +2118,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu3 span {
+  main .boxmenu .boxplats .bordermenu3:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu3:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu3:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu3 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu3 p {
@@ -2081,53 +2155,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu3 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu3 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu3 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu3 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu3 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu3 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxplats .bordermenu4 {
     display: -webkit-box;
@@ -2160,7 +2187,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu4 span {
+  main .boxmenu .boxplats .bordermenu4:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu4:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu4:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu4 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu4 p {
@@ -2169,53 +2224,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu4 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu4 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu4 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu4 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu4 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu4 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxplats .bordermenu5 {
     display: -webkit-box;
@@ -2248,7 +2256,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu5 span {
+  main .boxmenu .boxplats .bordermenu5:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu5:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu5:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu5 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu5 p {
@@ -2257,53 +2293,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu5 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu5 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu5 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu5 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu5 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu5 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxplats .bordermenu6 {
     display: -webkit-box;
@@ -2336,7 +2325,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu6 span {
+  main .boxmenu .boxplats .bordermenu6:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu6:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu6:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu6 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu6 p {
@@ -2345,53 +2362,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu6 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu6 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu6 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu6 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu6 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu6 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxplats .bordermenu7 {
     display: -webkit-box;
@@ -2424,7 +2394,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu7 span {
+  main .boxmenu .boxplats .bordermenu7:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu7:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu7:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu7 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu7 p {
@@ -2433,53 +2431,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu7 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu7 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu7 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu7 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu7 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu7 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxplats .bordermenu8 {
     display: -webkit-box;
@@ -2512,7 +2463,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu8 span {
+  main .boxmenu .boxplats .bordermenu8:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu8:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu8:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu8 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu8 p {
@@ -2521,53 +2500,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu8 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu8 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu8 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu8 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu8 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu8 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   main .boxmenu .boxplats .bordermenu9 {
     display: -webkit-box;
@@ -2600,7 +2532,35 @@
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu9 span {
+  main .boxmenu .boxplats .bordermenu9:hover .checkicon {
+    background-color: #99E2D0;
+    color: white;
+    display: inline-block;
+    position: relative;
+    left: 0.1em;
+    border-top: 0.9em solid #99E2D0;
+    border-bottom: 1.1em solid #99E2D0;
+    border-left: 0.9em solid #99E2D0;
+    border-right: 0.9em solid #99E2D0;
+    font-size: 1.2em;
+    border-radius: 0em 0.7em 0.7em 0em;
+    margin-top: 0em;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  main .boxmenu .boxplats .bordermenu9:hover .checkicon i {
+    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
+    transition: transform 400ms linear, 400ms ease-in-out;
+    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  }
+  main .boxmenu .boxplats .bordermenu9:hover .price {
+    -webkit-transform: translateX(-1.5em);
+            transform: translateX(-1.5em);
+  }
+  main .boxmenu .boxplats .bordermenu9 .recipe span {
     font-weight: bold;
   }
   main .boxmenu .boxplats .bordermenu9 p {
@@ -2609,53 +2569,6 @@
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu9 .boxicon {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  main .boxmenu .boxplats .bordermenu9 .boxicon .price {
-    font-weight: bold;
-    margin-top: 2.5em;
-    margin-right: 1.2em;
-    padding-top: 0.5em;
-    line-height: 0em;
-    font-size: 0.9em;
-  }
-  main .boxmenu .boxplats .bordermenu9 .boxicon .checkicon {
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    -webkit-transform-origin: right;
-            transform-origin: right;
-  }
-  main .boxmenu .boxplats .bordermenu9 .boxicon .checkicon i {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  main .boxmenu .boxplats .bordermenu9 .boxicon:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu9 .boxicon:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
   @-webkit-keyframes SlideInBottom {
     0% {

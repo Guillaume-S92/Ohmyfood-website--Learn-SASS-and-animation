@@ -9,57 +9,6 @@ $purple: #9356DC;
 $pink: #FF79DA ;
 $green: #99E2D0;
 
-@mixin bordercommands {
-    position: relative;
-    bottom: -3.7em;
-    margin-left: 7em;
-    margin-top: 4em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 3.5em;
-    padding-left: 3.5em;
-    border: 0px solid grey;
-    background: linear-gradient(to bottom right, $pink, $purple);
-    box-shadow: 0px 1px 10px rgb(177, 176, 176);
-    border-radius: 3em;
-    font-size: 0.9em;
-    width: fit-content;
-    height: fit-content;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-family: 'Roboto';
-}
-
-@mixin menus {
-    border: 2px solid white;
-    box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-    background-color: white;
-    border-radius: 1em;
-    margin-top: 1em;
-    padding-top: 0.5em;
-    .recipe{
-        font-weight: bold;
-    }
-    p{
-        font-family: 'Roboto';
-        line-height: 0em;
-        margin-top: 0.5em;
-        margin-left: 0.5em;
-    }
-    .price{
-        line-height: 0em;
-        display: flex;
-        justify-content: space-between;
-        font-size: 0.9em;
-        span{
-            font-size: 1em;
-            margin-right: 1em;
-            font-weight: bold;
-        }
-    }
-}
-
 
 @media screen and (min-width:768px){
 
@@ -72,7 +21,7 @@ $green: #99E2D0;
         padding-left: 3.5em;
         border: 0px solid grey;
         background: linear-gradient(to bottom right, $pink, $purple);
-        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        box-shadow: 0px 5px 10px rgb(177, 176, 176);
         border-radius: 3em;
         font-size: 1.1em;
         width: fit-content;
@@ -81,18 +30,48 @@ $green: #99E2D0;
         color: white;
         font-weight: bold;
         font-family: 'Roboto';
+        &:hover{
+            background: linear-gradient(to bottom right, #ff79d9dc, #9256dce1);
+            box-shadow: 0px 10px 10px rgb(177, 176, 176);
+        }
     }
     
     @mixin menus {
         display: flex;
         justify-content: space-between;
-        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-        background-color: white;
+        box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
+        background-color: rgba(255, 255, 255, 0.521);
         border-radius: 1em;
         margin-top: 1em;
         font-size: 1.1em;
         width: 28em;
         height: fit-content;
+        &:hover{
+            background-color: white;
+            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
+            .checkicon{
+                background-color: $green;
+                color:white;
+                display: inline-block;
+                position: relative;
+                left: 0.1em;
+                border-top:0.9em solid #99E2D0;
+                border-bottom:1.1em solid #99E2D0;
+                border-left:0.9em solid #99E2D0;
+                border-right:0.9em solid #99E2D0;
+                font-size: 1.2em;
+                border-radius: 0em 0.7em 0.7em 0em;
+                margin-top: 0em;
+                transform: scaleX(1);
+                i{
+                    transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+                    transition: transform 400ms linear, 400ms ease-in-out;
+                }
+            }
+            .price{
+                transform: translateX(-1.5em);
+            }
+        }
         .recipe{
             span{
                 font-weight: bold;
@@ -105,7 +84,7 @@ $green: #99E2D0;
             margin-top: 0.5em;
             margin-left: 0.5em;
         }
-
+    }
         .boxicon{
             display: flex;
                 .price{
@@ -115,6 +94,7 @@ $green: #99E2D0;
                     padding-top: 0.5em;
                     line-height: 0em;
                     font-size: 0.9em;
+                    transition: transform 400ms linear;
                 }        
                 .checkicon{
                     transition: transform 400ms ease-in-out;
@@ -127,26 +107,7 @@ $green: #99E2D0;
                         left: 1.5em;
                     }
                 }
-
-                &:hover{
-                    .checkicon{
-                        background-color: $green;
-                        color:white;
-                        display: inline-block;
-                        position: relative;
-                        border:0.9em solid #99E2D0;
-                        font-size: 1.2em;
-                        border-radius: 0em 0.7em 0.7em 0em;
-                        margin-top: 0em;
-                        transform: scaleX(1);
-                        i{
-                            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-                            transition: transform 400ms linear, 400ms ease-in-out;
-                        }
-                    }
-                }
             }
-    }
 
     html{
         font-size: 1vw;
@@ -154,6 +115,7 @@ $green: #99E2D0;
 
     body{
         margin: 0%;
+        height: 100vh;
     }
         header{
             .boxheader{
@@ -169,6 +131,7 @@ $green: #99E2D0;
                     position: relative;
                     top: 50%;
                     font-size: 1.4em;
+                    color: black;
                 }
             }
         }
@@ -218,6 +181,7 @@ $green: #99E2D0;
                             color: transparent;
                             background-clip: text;
                             background-image: linear-gradient( $purple, $pink);
+
                         }
                     }
                     .like i:nth-child(2){
@@ -229,6 +193,16 @@ $green: #99E2D0;
                     }
                     .like:hover i:nth-child(2){
                         display: block;
+                        animation: fill 1s;
+                        transform-origin: bottom;
+                        @keyframes fill {
+                            0%{
+                                transform: scaleY(0);
+                            }
+                            100%{
+                                transform: scaleY(1)
+                            }
+                        }  
                     }
             }
 
@@ -252,9 +226,85 @@ $green: #99E2D0;
                     text-decoration: none;
                     color: black;
                 }
-                .bordermenu{
+                .bordermenu1{
                     @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu2{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu3{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu4{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;    
+                }
+                .bordermenu5{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1000ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu6{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu7{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;   
+                }
+                .bordermenu8{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;  
+                }
+                .bordermenu9{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                }
 
+                @keyframes SlideInBottom {
+                    0%{
+                        opacity: 0;
+                    }
+                    40%{
+                        opacity: 0;
+                        transform: translateY(10%);
+                    }
+                    100%{
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
                 }
             }
                 .commands{
@@ -285,7 +335,7 @@ $green: #99E2D0;
                 }
                 p{
                     margin-left: 2em;
-                    line-height: 0.5em;
+                    line-height: 0.7em;
                     font-family: 'Roboto';
                 }
                 i{
@@ -311,7 +361,7 @@ $green: #99E2D0;
     @mixin bordercommands {
         position: relative;
         bottom: -3.7em;
-        margin-left: 7em;
+        margin-left: 25vw;
         margin-top: 4em;
         padding-top: 1em;
         padding-bottom: 1em;
@@ -319,7 +369,7 @@ $green: #99E2D0;
         padding-left: 3.5em;
         border: 0px solid grey;
         background: linear-gradient(to bottom right, $pink, $purple);
-        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        box-shadow: 0px 5px 10px rgb(177, 176, 176);
         border-radius: 3em;
         font-size: 0.9em;
         width: fit-content;
@@ -328,6 +378,9 @@ $green: #99E2D0;
         color: white;
         font-weight: bold;
         font-family: 'Roboto';
+        &:hover{
+            background: linear-gradient(to bottom right, #ff79d9dc, #9256dce1);
+            box-shadow: 0px 10px 10px rgb(177, 176, 176);}
     }
     
 
@@ -338,33 +391,63 @@ $green: #99E2D0;
     @mixin menus {
         display: flex;
         justify-content: space-between;
-        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-        background-color: white;
+        box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
+        background-color: rgba(255, 255, 255, 0.521);
         border-radius: 1em;
         margin-top: 1em;
         height: fit-content;
+        &:hover{
+                background-color: white;
+                box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
+            .checkicon{
+                background-color: $green;
+                color:white;
+                display: inline-block;
+                position: relative;
+                border:0.9em solid #99E2D0;
+                font-size: 1.2em;
+                border-radius: 0em 0.7em 0.7em 0em;
+                margin-top: 0em;
+                transform: scaleX(1);
+                i{
+                    transform: scaleX(1) rotate(360deg);
+                    transition: transform 400ms ease-in-out;
+                }
+            }
+            .price{
+                transform: translateX(-1.5em);
+            }
+            .recipe{
+                width: 220px;
+            }
+        }
+        .sides{
+            padding-bottom: 10px;
+        }
         span{
             font-weight: bold;
         }
         p{  
             padding-top: 0.5em;
             font-family: 'Roboto';
-            line-height: 0em;
-            margin-top: 0.5em;
-            margin-left: 0.5em;
-            font-size: 0.9em;
-            white-space: nowrap;
+            margin-top: 0px;
+            margin-left: 10px;
+            margin-bottom: 0px;
+            font-size: 15px;
             text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
+    }
         .boxicon{
             display: flex;
                 .price{
                     font-weight: bold;
-                    margin-top: 2.5em;
-                    margin-right: 1.2em;
+                    margin-top: 2.8em;
                     padding-top: 0.5em;
                     line-height: 0em;
                     font-size: 0.8em;
+                    transition:transform 400ms linear;
                 }    
                 .checkicon{
                     transition: transform 400ms ease-in-out;
@@ -375,25 +458,7 @@ $green: #99E2D0;
                     }
                 }
 
-                &:hover{
-                    .checkicon{
-                        background-color: $green;
-                        color:white;
-                        display: inline-block;
-                        position: relative;
-                        border:0.9em solid #99E2D0;
-                        font-size: 1.2em;
-                        border-radius: 0em 0.7em 0.7em 0em;
-                        margin-top: 0em;
-                        transform: scaleX(1);
-                        i{
-                            transform: scaleX(1) rotate(360deg);
-                            transition: transform 400ms ease-in-out;
-                        }
-                    }
-                }
         }
-    }
 
     body{
         margin: 0%;
@@ -401,15 +466,16 @@ $green: #99E2D0;
         header{
             .boxheader{
             display: flex;
+            justify-content: center;
             height: 4.5em;
                 h1{
                     font-family: 'Shrikhand';
-                    margin-left: 2em;
+                    margin-left: 1em;
                 }
                 i{
                     margin-top: 1.3em;
-                    margin-left: 1em;
                     font-size: 1.4em;
+                    color: black;
                 }
             }
         }
@@ -453,12 +519,15 @@ $green: #99E2D0;
                     }
                     a{
                         color: black;
+                        text-decoration: none;
                     }
                     .like{
+                        margin-right: 2em;
                         .fa-solid{
                             color: transparent;
                             background-clip: text;
                             background-image: linear-gradient( $purple, $pink);
+
                         }
                     }
                     .like i:nth-child(2){
@@ -470,6 +539,16 @@ $green: #99E2D0;
                     }
                     .like:hover i:nth-child(2){
                         display: block;
+                        animation: fill 1s;
+                        transform-origin: bottom;
+                        @keyframes fill {
+                            0%{
+                                transform: scaleY(0);
+                            }
+                            100%{
+                                transform: scaleY(1)
+                            }
+                        }  
                     }
             }
 
@@ -488,8 +567,85 @@ $green: #99E2D0;
                     text-decoration: none;
                     color: black;
                 }
-                .bordermenu{
+                .bordermenu1{
                     @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu2{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu3{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu4{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;    
+                }
+                .bordermenu5{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1000ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu6{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu7{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;   
+                }
+                .bordermenu8{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;  
+                }
+                .bordermenu9{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                }
+
+                @keyframes SlideInBottom {
+                    0%{
+                        opacity: 0;
+                    }
+                    40%{
+                        opacity: 0;
+                        transform: translateY(10%);
+                    }
+                    100%{
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
                 }
             }
                 .commands{
@@ -544,7 +700,7 @@ $green: #99E2D0;
         padding-left: 3.5em;
         border: 0px solid grey;
         background: linear-gradient(to bottom right, $pink, $purple);
-        box-shadow: 0px 1px 10px rgb(177, 176, 176);
+        box-shadow: 0px 5px 10px rgb(177, 176, 176);
         border-radius: 3em;
         font-size: 0.9em;
         width: fit-content;
@@ -553,20 +709,51 @@ $green: #99E2D0;
         color: white;
         font-weight: bold;
         font-family: 'Roboto';
+        &:hover{
+            background: linear-gradient(to bottom right, #ff79d9dc, #9256dce1);
+            box-shadow: 0px 10px 10px rgb(177, 176, 176);}
     }
     
     @mixin menus {
         display: flex;
         justify-content: space-between;
-        box-shadow: 0px 1px 10px rgba(177, 176, 176, 0.342);
-        background-color: white;
+        box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
+        background-color: rgba(255, 255, 255, 0.521);
         border-radius: 1em;
         margin-top: 1em;
         font-size: 1.1em;
         width: 28em;
         height: fit-content;
-        span{
-            font-weight: bold;
+        &:hover{
+            background-color: white;
+            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
+            .checkicon{
+                background-color: $green;
+                color:white;
+                display: inline-block;
+                position: relative;
+                left: 0.1em;
+                border-top:0.9em solid #99E2D0;
+                border-bottom:1.1em solid #99E2D0;
+                border-left:0.9em solid #99E2D0;
+                border-right:0.9em solid #99E2D0;
+                font-size: 1.2em;
+                border-radius: 0em 0.7em 0.7em 0em;
+                margin-top: 0em;
+                transform: scaleX(1);
+                i{
+                    transform: scaleX(1) translateX(-1.5em) rotate(360deg);
+                    transition: transform 400ms linear, 400ms ease-in-out;
+                }
+            }
+            .price{
+                transform: translateX(-1.5em);
+            }
+        }
+        .recipe{
+            span{
+                font-weight: bold;
+            }
         }
         p{  
             padding-top: 0.5em;
@@ -575,48 +762,36 @@ $green: #99E2D0;
             margin-top: 0.5em;
             margin-left: 0.5em;
         }
+    }
         .boxicon{
             display: flex;
-                        .price{
-                            font-weight: bold;
-                            margin-top: 2.5em;
-                            margin-right: 1.2em;
-                            padding-top: 0.5em;
-                            line-height: 0em;
-                            font-size: 0.9em;
-                        }
-                        .checkicon{
-                            transition: transform 400ms ease-in-out;
-                            transform: scaleX(0);
-                            transform-origin: right;
-                            i{
-                                transform: scaleX(0);
-                            }
-                        }
-        
-                        &:hover{
-                            .checkicon{
-                                background-color: $green;
-                                color:white;
-                                display: inline-block;
-                                position: relative;
-                                border:0.9em solid #99E2D0;
-                                font-size: 1.2em;
-                                border-radius: 0em 0.7em 0.7em 0em;
-                                margin-top: 0em;
-                                transform: scaleX(1);
-                                i{
-                                    transform: scaleX(1) rotate(360deg);
-                                    transition: transform 400ms ease-in-out;
-                                }
-                            }
-                        }
+                .price{
+                    font-weight: bold;
+                    margin-top: 2.5em;
+                    margin-right: 1.2em;
+                    padding-top: 0.5em;
+                    line-height: 0em;
+                    font-size: 0.9em;
+                    transition: transform 400ms linear;
+                }        
+                .checkicon{
+                    transition: transform 400ms ease-in-out;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    i{
+                        color: white;
+                        transform: scaleX(0);
+                        position: relative;
+                        left: 1.5em;
+                    }
+                }
             }
-    }
 
     body{
         margin: 0%;
     }
+
+    
         header{
             .boxheader{
             display: flex;
@@ -629,6 +804,7 @@ $green: #99E2D0;
                     margin-top: 1.3em;
                     font-size: 1.4em;
                     margin-right: 1em;
+                    color: black;
                 }
             }
         }
@@ -669,12 +845,14 @@ $green: #99E2D0;
                     }
                     a{
                         color: black;
+                        text-decoration: none;
                     }
                     .like{
                         .fa-solid{
                             color: transparent;
                             background-clip: text;
                             background-image: linear-gradient( $purple, $pink);
+
                         }
                     }
                     .like i:nth-child(2){
@@ -686,6 +864,16 @@ $green: #99E2D0;
                     }
                     .like:hover i:nth-child(2){
                         display: block;
+                        animation: fill 1s;
+                        transform-origin: bottom;
+                        @keyframes fill {
+                            0%{
+                                transform: scaleY(0);
+                            }
+                            100%{
+                                transform: scaleY(1)
+                            }
+                        }  
                     }
             }
 
@@ -704,8 +892,85 @@ $green: #99E2D0;
                     text-decoration: none;
                     color: black;
                 }
-                .bordermenu{
+                .bordermenu1{
                     @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu2{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu3{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                    
+                }
+                .bordermenu4{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;    
+                }
+                .bordermenu5{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1000ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu6{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1200ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1; 
+                }
+                .bordermenu7{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1400ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;   
+                }
+                .bordermenu8{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1600ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;  
+                }
+                .bordermenu9{
+                    @include menus;
+                    animation-name:SlideInBottom;
+                    animation-duration: 1800ms;
+                    animation-timing-function: linear;
+                    animation-iteration-count: 1;
+                }
+
+                @keyframes SlideInBottom {
+                    0%{
+                        opacity: 0;
+                    }
+                    40%{
+                        opacity: 0;
+                        transform: translateY(10%);
+                    }
+                    100%{
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
                 }
             }
                 .boxcommands{
