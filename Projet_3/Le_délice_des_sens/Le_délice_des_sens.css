@@ -45,7 +45,6 @@
   }
   body {
     margin: 0%;
-    height: 100vh;
   }
   header .boxheader {
     display: -webkit-box;
@@ -80,6 +79,7 @@
        object-position: 0% 70%;
   }
   main .boxmenu {
+    height: 100%;
     background-color: #f7f3f3;
     border: 2px solid transparent;
     border-radius: 2em 2em 0 0;
@@ -173,76 +173,7 @@
     text-decoration: none;
     color: black;
   }
-  main .boxmenu .boxplats .bordermenu1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    font-size: 1.1em;
-    width: 28em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 200ms;
-            animation-duration: 200ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  main .boxmenu .boxplats .bordermenu1:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu1:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    left: 0.1em;
-    border-top: 0.9em solid #99E2D0;
-    border-bottom: 0.9em solid #99E2D0;
-    border-left: 0.9em solid #99E2D0;
-    border-right: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu1:hover .checkicon i {
-    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
-  }
-  main .boxmenu .boxplats .bordermenu1:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu1 .recipe span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu1 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu2 {
+  main .boxmenu .boxplats .bordermenu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -268,12 +199,12 @@
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu2:hover {
+  main .boxmenu .boxplats .bordermenu:hover {
     background-color: white;
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu2:hover .checkicon {
+  main .boxmenu .boxplats .bordermenu:hover .checkicon {
     background-color: #99E2D0;
     color: white;
     display: inline-block;
@@ -289,7 +220,7 @@
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  main .boxmenu .boxplats .bordermenu2:hover .checkicon i {
+  main .boxmenu .boxplats .bordermenu:hover .checkicon i {
     -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
             transform: scaleX(1) translateX(-1.5em) rotate(360deg);
     -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
@@ -297,508 +228,61 @@
     transition: transform 400ms linear, 400ms ease-in-out;
     transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
   }
-  main .boxmenu .boxplats .bordermenu2:hover .price {
+  main .boxmenu .boxplats .bordermenu:hover .price {
     -webkit-transform: translateX(-1.5em);
             transform: translateX(-1.5em);
   }
-  main .boxmenu .boxplats .bordermenu2 .recipe span {
+  main .boxmenu .boxplats .bordermenu .recipe span {
     font-weight: bold;
   }
-  main .boxmenu .boxplats .bordermenu2 p {
+  main .boxmenu .boxplats .bordermenu p {
     padding-top: 0.5em;
     font-family: 'Roboto';
     line-height: 0em;
     margin-top: 0.5em;
     margin-left: 0.5em;
   }
-  main .boxmenu .boxplats .bordermenu3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    font-size: 1.1em;
-    width: 28em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 600ms;
-            animation-duration: 600ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
+  main .boxmenu .boxplats .bordermenu1 {
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
   }
-  main .boxmenu .boxplats .bordermenu3:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu3:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    left: 0.1em;
-    border-top: 0.9em solid #99E2D0;
-    border-bottom: 0.9em solid #99E2D0;
-    border-left: 0.9em solid #99E2D0;
-    border-right: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu3:hover .checkicon i {
-    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
-  }
-  main .boxmenu .boxplats .bordermenu3:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu3 .recipe span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu3 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu4 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    font-size: 1.1em;
-    width: 28em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
+  main .boxmenu .boxplats .bordermenu2 {
     -webkit-animation-duration: 800ms;
             animation-duration: 800ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu4:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu4:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    left: 0.1em;
-    border-top: 0.9em solid #99E2D0;
-    border-bottom: 0.9em solid #99E2D0;
-    border-left: 0.9em solid #99E2D0;
-    border-right: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu4:hover .checkicon i {
-    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
-  }
-  main .boxmenu .boxplats .bordermenu4:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu4 .recipe span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu4 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu5 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    font-size: 1.1em;
-    width: 28em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  main .boxmenu .boxplats .bordermenu5:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu5:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    left: 0.1em;
-    border-top: 0.9em solid #99E2D0;
-    border-bottom: 0.9em solid #99E2D0;
-    border-left: 0.9em solid #99E2D0;
-    border-right: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu5:hover .checkicon i {
-    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
-  }
-  main .boxmenu .boxplats .bordermenu5:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu5 .recipe span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu5 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu6 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    font-size: 1.1em;
-    width: 28em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
+  main .boxmenu .boxplats .bordermenu3 {
     -webkit-animation-duration: 1200ms;
             animation-duration: 1200ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu6:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu6:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    left: 0.1em;
-    border-top: 0.9em solid #99E2D0;
-    border-bottom: 0.9em solid #99E2D0;
-    border-left: 0.9em solid #99E2D0;
-    border-right: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu6:hover .checkicon i {
-    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
-  }
-  main .boxmenu .boxplats .bordermenu6:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu6 .recipe span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu6 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu7 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    font-size: 1.1em;
-    width: 28em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 1400ms;
-            animation-duration: 1400ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  main .boxmenu .boxplats .bordermenu7:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu7:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    left: 0.1em;
-    border-top: 0.9em solid #99E2D0;
-    border-bottom: 0.9em solid #99E2D0;
-    border-left: 0.9em solid #99E2D0;
-    border-right: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu7:hover .checkicon i {
-    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
-  }
-  main .boxmenu .boxplats .bordermenu7:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu7 .recipe span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu7 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
-  }
-  main .boxmenu .boxplats .bordermenu8 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    font-size: 1.1em;
-    width: 28em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
+  main .boxmenu .boxplats .bordermenu4 {
     -webkit-animation-duration: 1600ms;
             animation-duration: 1600ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu8:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
+  main .boxmenu .boxplats .bordermenu5 {
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
   }
-  main .boxmenu .boxplats .bordermenu8:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    left: 0.1em;
-    border-top: 0.9em solid #99E2D0;
-    border-bottom: 0.9em solid #99E2D0;
-    border-left: 0.9em solid #99E2D0;
-    border-right: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+  main .boxmenu .boxplats .bordermenu6 {
+    -webkit-animation-duration: 2400ms;
+            animation-duration: 2400ms;
   }
-  main .boxmenu .boxplats .bordermenu8:hover .checkicon i {
-    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+  main .boxmenu .boxplats .bordermenu7 {
+    -webkit-animation-duration: 2800ms;
+            animation-duration: 2800ms;
   }
-  main .boxmenu .boxplats .bordermenu8:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu8 .recipe span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu8 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
+  main .boxmenu .boxplats .bordermenu8 {
+    -webkit-animation-duration: 3200ms;
+            animation-duration: 3200ms;
   }
   main .boxmenu .boxplats .bordermenu9 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    font-size: 1.1em;
-    width: 28em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 1800ms;
-            animation-duration: 1800ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  main .boxmenu .boxplats .bordermenu9:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu9:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    left: 0.1em;
-    border-top: 0.9em solid #99E2D0;
-    border-bottom: 0.9em solid #99E2D0;
-    border-left: 0.9em solid #99E2D0;
-    border-right: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu9:hover .checkicon i {
-    -webkit-transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-            transform: scaleX(1) translateX(-1.5em) rotate(360deg);
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
-  }
-  main .boxmenu .boxplats .bordermenu9:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu9 .recipe span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu9 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    line-height: 0em;
-    margin-top: 0.5em;
-    margin-left: 0.5em;
+    -webkit-animation-duration: 3600ms;
+            animation-duration: 3600ms;
   }
   @-webkit-keyframes SlideInBottom {
     0% {
       opacity: 0;
     }
-    40% {
+    60% {
       opacity: 0;
       -webkit-transform: translateY(10%);
               transform: translateY(10%);
@@ -813,7 +297,7 @@
     0% {
       opacity: 0;
     }
-    40% {
+    60% {
       opacity: 0;
       -webkit-transform: translateY(10%);
               transform: translateY(10%);
@@ -925,22 +409,23 @@
   }
   body {
     margin: 0%;
+    height: 100vh;
   }
   header .boxheader {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     height: 4.5em;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   header .boxheader h1 {
     font-family: 'Shrikhand';
-    margin-left: 1em;
+    margin-right: 2em;
   }
   header .boxheader i {
     margin-top: 1.3em;
+    margin-right: 1em;
     font-size: 1.4em;
     color: black;
   }
@@ -961,33 +446,31 @@
     position: relative;
     top: -3.5em;
     margin-bottom: -3.5em;
-    padding-bottom: 5em;
+    padding-bottom: 9em;
   }
   main .boxmenu .restauranttitle {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-left: 1em;
     margin-top: 0em;
     margin-bottom: 0em;
   }
   main .boxmenu .restauranttitle h1 {
     font-family: 'Shrikhand';
-    font-size: 1.8em;
-    -webkit-transition: background-color 400ms;
-    transition: background-color 400ms;
+    font-size: 1.6em;
   }
   main .boxmenu .restauranttitle i {
     font-size: 1.5em;
-    margin-top: 1.2em;
-    margin-left: 3em;
+    margin-top: 1em;
+    margin-right: 2em;
+    color: black;
   }
   main .boxmenu .restauranttitle a {
-    color: black;
     text-decoration: none;
-  }
-  main .boxmenu .restauranttitle .like {
-    margin-right: 2em;
   }
   main .boxmenu .restauranttitle .like .fa-solid {
     color: transparent;
@@ -1044,80 +527,7 @@
     text-decoration: none;
     color: black;
   }
-  main .boxmenu .boxplats .bordermenu1 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 200ms;
-            animation-duration: 200ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  main .boxmenu .boxplats .bordermenu1:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu1:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu1:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  }
-  main .boxmenu .boxplats .bordermenu1:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu1:hover .recipe {
-    width: 220px;
-  }
-  main .boxmenu .boxplats .bordermenu1 .sides {
-    padding-bottom: 10px;
-  }
-  main .boxmenu .boxplats .bordermenu1 span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu1 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  main .boxmenu .boxplats .bordermenu2 {
+  main .boxmenu .boxplats .bordermenu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1141,12 +551,12 @@
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu2:hover {
+  main .boxmenu .boxplats .bordermenu:hover {
     background-color: white;
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu2:hover .checkicon {
+  main .boxmenu .boxplats .bordermenu:hover .checkicon {
     background-color: #99E2D0;
     color: white;
     display: inline-block;
@@ -1158,7 +568,7 @@
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
   }
-  main .boxmenu .boxplats .bordermenu2:hover .checkicon i {
+  main .boxmenu .boxplats .bordermenu:hover .checkicon i {
     -webkit-transform: scaleX(1) rotate(360deg);
             transform: scaleX(1) rotate(360deg);
     -webkit-transition: -webkit-transform 400ms ease-in-out;
@@ -1166,20 +576,20 @@
     transition: transform 400ms ease-in-out;
     transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
   }
-  main .boxmenu .boxplats .bordermenu2:hover .price {
+  main .boxmenu .boxplats .bordermenu:hover .price {
     -webkit-transform: translateX(-1.5em);
             transform: translateX(-1.5em);
   }
-  main .boxmenu .boxplats .bordermenu2:hover .recipe {
+  main .boxmenu .boxplats .bordermenu:hover .recipe {
     width: 220px;
   }
-  main .boxmenu .boxplats .bordermenu2 .sides {
+  main .boxmenu .boxplats .bordermenu .sides {
     padding-bottom: 10px;
   }
-  main .boxmenu .boxplats .bordermenu2 span {
+  main .boxmenu .boxplats .bordermenu span {
     font-weight: bold;
   }
-  main .boxmenu .boxplats .bordermenu2 p {
+  main .boxmenu .boxplats .bordermenu p {
     padding-top: 0.5em;
     font-family: 'Roboto';
     margin-top: 0px;
@@ -1190,522 +600,47 @@
     overflow: hidden;
     white-space: nowrap;
   }
-  main .boxmenu .boxplats .bordermenu3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 600ms;
-            animation-duration: 600ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
+  main .boxmenu .boxplats .bordermenu1 {
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
   }
-  main .boxmenu .boxplats .bordermenu3:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu3:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu3:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  }
-  main .boxmenu .boxplats .bordermenu3:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu3:hover .recipe {
-    width: 220px;
-  }
-  main .boxmenu .boxplats .bordermenu3 .sides {
-    padding-bottom: 10px;
-  }
-  main .boxmenu .boxplats .bordermenu3 span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu3 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  main .boxmenu .boxplats .bordermenu4 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
+  main .boxmenu .boxplats .bordermenu2 {
     -webkit-animation-duration: 800ms;
             animation-duration: 800ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu4:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu4:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu4:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  }
-  main .boxmenu .boxplats .bordermenu4:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu4:hover .recipe {
-    width: 220px;
-  }
-  main .boxmenu .boxplats .bordermenu4 .sides {
-    padding-bottom: 10px;
-  }
-  main .boxmenu .boxplats .bordermenu4 span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu4 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  main .boxmenu .boxplats .bordermenu5 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  main .boxmenu .boxplats .bordermenu5:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu5:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu5:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  }
-  main .boxmenu .boxplats .bordermenu5:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu5:hover .recipe {
-    width: 220px;
-  }
-  main .boxmenu .boxplats .bordermenu5 .sides {
-    padding-bottom: 10px;
-  }
-  main .boxmenu .boxplats .bordermenu5 span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu5 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  main .boxmenu .boxplats .bordermenu6 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
+  main .boxmenu .boxplats .bordermenu3 {
     -webkit-animation-duration: 1200ms;
             animation-duration: 1200ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu6:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu6:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu6:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  }
-  main .boxmenu .boxplats .bordermenu6:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu6:hover .recipe {
-    width: 220px;
-  }
-  main .boxmenu .boxplats .bordermenu6 .sides {
-    padding-bottom: 10px;
-  }
-  main .boxmenu .boxplats .bordermenu6 span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu6 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  main .boxmenu .boxplats .bordermenu7 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 1400ms;
-            animation-duration: 1400ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  main .boxmenu .boxplats .bordermenu7:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu7:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu7:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  }
-  main .boxmenu .boxplats .bordermenu7:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu7:hover .recipe {
-    width: 220px;
-  }
-  main .boxmenu .boxplats .bordermenu7 .sides {
-    padding-bottom: 10px;
-  }
-  main .boxmenu .boxplats .bordermenu7 span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu7 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-  main .boxmenu .boxplats .bordermenu8 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
+  main .boxmenu .boxplats .bordermenu4 {
     -webkit-animation-duration: 1600ms;
             animation-duration: 1600ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu8:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
+  main .boxmenu .boxplats .bordermenu5 {
+    -webkit-animation-duration: 2000ms;
+            animation-duration: 2000ms;
   }
-  main .boxmenu .boxplats .bordermenu8:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+  main .boxmenu .boxplats .bordermenu6 {
+    -webkit-animation-duration: 2400ms;
+            animation-duration: 2400ms;
   }
-  main .boxmenu .boxplats .bordermenu8:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+  main .boxmenu .boxplats .bordermenu7 {
+    -webkit-animation-duration: 2800ms;
+            animation-duration: 2800ms;
   }
-  main .boxmenu .boxplats .bordermenu8:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu8:hover .recipe {
-    width: 220px;
-  }
-  main .boxmenu .boxplats .bordermenu8 .sides {
-    padding-bottom: 10px;
-  }
-  main .boxmenu .boxplats .bordermenu8 span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu8 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+  main .boxmenu .boxplats .bordermenu8 {
+    -webkit-animation-duration: 3200ms;
+            animation-duration: 3200ms;
   }
   main .boxmenu .boxplats .bordermenu9 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 5px 10px rgba(177, 176, 176, 0.342);
-    background-color: rgba(255, 255, 255, 0.521);
-    border-radius: 1em;
-    margin-top: 1em;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    -webkit-animation-name: SlideInBottom;
-            animation-name: SlideInBottom;
-    -webkit-animation-duration: 1800ms;
-            animation-duration: 1800ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
-  }
-  main .boxmenu .boxplats .bordermenu9:hover {
-    background-color: white;
-    -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-            box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
-  }
-  main .boxmenu .boxplats .bordermenu9:hover .checkicon {
-    background-color: #99E2D0;
-    color: white;
-    display: inline-block;
-    position: relative;
-    border: 0.9em solid #99E2D0;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-  main .boxmenu .boxplats .bordermenu9:hover .checkicon i {
-    -webkit-transform: scaleX(1) rotate(360deg);
-            transform: scaleX(1) rotate(360deg);
-    -webkit-transition: -webkit-transform 400ms ease-in-out;
-    transition: -webkit-transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out;
-    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
-  }
-  main .boxmenu .boxplats .bordermenu9:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
-  }
-  main .boxmenu .boxplats .bordermenu9:hover .recipe {
-    width: 220px;
-  }
-  main .boxmenu .boxplats .bordermenu9 .sides {
-    padding-bottom: 10px;
-  }
-  main .boxmenu .boxplats .bordermenu9 span {
-    font-weight: bold;
-  }
-  main .boxmenu .boxplats .bordermenu9 p {
-    padding-top: 0.5em;
-    font-family: 'Roboto';
-    margin-top: 0px;
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-size: 15px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    -webkit-animation-duration: 3600ms;
+            animation-duration: 3600ms;
   }
   @-webkit-keyframes SlideInBottom {
     0% {
       opacity: 0;
     }
-    40% {
+    60% {
       opacity: 0;
       -webkit-transform: translateY(10%);
               transform: translateY(10%);
@@ -1720,7 +655,7 @@
     0% {
       opacity: 0;
     }
-    40% {
+    60% {
       opacity: 0;
       -webkit-transform: translateY(10%);
               transform: translateY(10%);
@@ -1731,16 +666,10 @@
       opacity: 1;
     }
   }
-  main .boxmenu .boxcommands {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  main .boxmenu .boxcommands .commands {
+  main .boxmenu .commands {
     position: relative;
+    bottom: -3.7em;
+    margin-left: 25vw;
     margin-top: 4em;
     padding-top: 1em;
     padding-bottom: 1em;
@@ -1764,7 +693,7 @@
     font-weight: bold;
     font-family: 'Roboto';
   }
-  main .boxmenu .boxcommands .commands:hover {
+  main .boxmenu .commands:hover {
     background: -webkit-gradient(linear, left top, right bottom, from(#ff79d9dc), to(#9256dce1));
     background: linear-gradient(to bottom right, #ff79d9dc, #9256dce1);
     -webkit-box-shadow: 0px 10px 10px #b1b0b0;
@@ -1802,4 +731,4 @@
     margin-left: -0.2em;
   }
 }
-/*# sourceMappingURL=Le délice des sens.css.map */
+/*# sourceMappingURL=Le_délice_des_sens.css.map */

@@ -168,6 +168,8 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   main .boxmenu .boxplats a {
     text-decoration: none;
@@ -277,6 +279,10 @@
   main .boxmenu .boxplats .bordermenu9 {
     -webkit-animation-duration: 3600ms;
             animation-duration: 3600ms;
+  }
+  main .boxmenu .boxplats .bordermenu10 {
+    -webkit-animation-duration: 4000ms;
+            animation-duration: 4000ms;
   }
   @-webkit-keyframes SlideInBottom {
     0% {
@@ -731,4 +737,4 @@
     margin-left: -0.2em;
   }
 }
-/*# sourceMappingURL=Menu_à_la_française.css.map */
+/*# sourceMappingURL=La note_enchantée.css.map */

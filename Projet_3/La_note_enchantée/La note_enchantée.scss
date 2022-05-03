@@ -10,6 +10,7 @@ $pink: #FF79DA ;
 $green: #99E2D0;
 
 
+
 @media screen and (min-width:901px){
 
     @mixin bordercommands {
@@ -84,6 +85,7 @@ $green: #99E2D0;
             margin-top: 0.5em;
             margin-left: 0.5em;
         }
+        
     }
         .boxicon{
             display: flex;
@@ -108,6 +110,7 @@ $green: #99E2D0;
                     }
                 }
             }
+    
 
     html{
         font-size: 1vw;
@@ -115,8 +118,8 @@ $green: #99E2D0;
 
     body{
         margin: 0%;
-        height: 100vh;
     }
+
         header{
             .boxheader{
             display: flex;
@@ -149,6 +152,7 @@ $green: #99E2D0;
             }
 
             .boxmenu{
+            height: 100%;
             background-color: rgb(247, 243, 243);
             border: 2px solid transparent ;
             border-radius: 2em 2em 0 0;
@@ -227,85 +231,26 @@ $green: #99E2D0;
                     text-decoration: none;
                     color: black;
                 }
-                .bordermenu1{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 200ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
-                    
-                }
-                .bordermenu2{
+                .bordermenu{
                     @include menus;
                     animation-name:SlideInBottom;
                     animation-duration: 400ms;
                     animation-timing-function: linear;
                     animation-iteration-count: 1;
-                    
                 }
-                .bordermenu3{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 600ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
-                    
-                }
-                .bordermenu4{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 800ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;    
-                }
-                .bordermenu5{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1000ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1; 
-                }
-                .bordermenu6{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1200ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1; 
-                }
-                .bordermenu7{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1400ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;   
-                }
-                .bordermenu8{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1600ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;  
-                }
-                .bordermenu9{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1800ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
-                }
-                .bordermenu10{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1800ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
+
+                @for $i from 1 through 10{
+                    .bordermenu#{$i}{
+                        animation-duration: 400ms*$i;
+                        
+                    }
                 }
 
                 @keyframes SlideInBottom {
                     0%{
                         opacity: 0;
                     }
-                    40%{
+                    60%{
                         opacity: 0;
                         transform: translateY(10%);
                     }
@@ -367,8 +312,9 @@ $green: #99E2D0;
 
 
     @mixin bordercommands {
-
-        position: relative ;
+        position: relative;
+        bottom: -3.7em;
+        margin-left: 25vw;
         margin-top: 4em;
         padding-top: 1em;
         padding-bottom: 1em;
@@ -469,18 +415,21 @@ $green: #99E2D0;
 
     body{
         margin: 0%;
+        height: 100vh;
     }
         header{
             .boxheader{
             display: flex;
-            justify-content: center;
             height: 4.5em;
+            justify-content: space-around;
                 h1{
                     font-family: 'Shrikhand';
-                    margin-left: 1em;
+                    margin-right:2em;
                 }
                 i{
                     margin-top: 1.3em;
+                    margin-right: 1em;
+                    
                     font-size: 1.4em;
                     color: black;
                 }
@@ -505,59 +454,57 @@ $green: #99E2D0;
             position: relative;
             top: -3.5em;
             margin-bottom: -3.5em;
-            padding-bottom: 5em;
+            padding-bottom: 9em;
 
 
             .restauranttitle{
-                    display: flex;
-                    margin-left: 1em;
-                    margin-top:0em;
-                    margin-bottom: 0em;
-                    h1{
-                        font-family: 'Shrikhand';
-                        font-size: 1.8em;
-                        transition: background-color 400ms;
-                    }
-                    i{
-                        font-size: 1.5em;
-                        margin-top: 1.2em;
-                        margin-left: 3em;
-                        
-                    }
-                    a{
-                        color: black;
-                        text-decoration: none;
-                    }
-                    .like{
-                        margin-right: 2em;
-                        .fa-solid{
-                            color: transparent;
-                            background-clip: text;
-                            background-image: linear-gradient( $purple, $pink);
+                display: flex;
+                justify-content: space-between;
+                margin-left: 1em;
+                margin-top:0em;
+                margin-bottom: 0em;
+                h1{
+                    font-family: 'Shrikhand';
+                    font-size: 1.6em;
+                }
+                i{
+                    font-size: 1.5em;
+                    margin-top: 1em;
+                    margin-right: 2em;
+                    color: black;
+                }
+                a{
+                    text-decoration: none;
+                }
+                .like{
+                    .fa-solid{
+                        color: transparent;
+                        background-clip: text;
+                        background-image: linear-gradient( $purple, $pink);
 
+                    }
+                }
+                .like i:nth-child(2){
+                    display:none;
+                }
+                
+                .like:hover i:nth-child(1){
+                    display: none;
+                }
+                .like:hover i:nth-child(2){
+                    display: block;
+                    animation: fill 1s;
+                    transform-origin: bottom;
+                    @keyframes fill {
+                        0%{
+                            transform: scaleY(0);
                         }
-                    }
-                    .like i:nth-child(2){
-                        display:none;
-                    }
-                    
-                    .like:hover i:nth-child(1){
-                        display: none;
-                    }
-                    .like:hover i:nth-child(2){
-                        display: block;
-                        animation: fill 1s;
-                        transform-origin: bottom;
-                        @keyframes fill {
-                            0%{
-                                transform: scaleY(0);
-                            }
-                            100%{
-                                transform: scaleY(1)
-                            }
-                        }  
-                    }
-            }
+                        100%{
+                            transform: scaleY(1)
+                        }
+                    }  
+                }
+        }
 
             .boxplats{
                 margin-left: 1em;
@@ -574,85 +521,24 @@ $green: #99E2D0;
                     text-decoration: none;
                     color: black;
                 }
-                .bordermenu1{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 200ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
-                    
-                }
-                .bordermenu2{
+                .bordermenu{
                     @include menus;
                     animation-name:SlideInBottom;
                     animation-duration: 400ms;
                     animation-timing-function: linear;
                     animation-iteration-count: 1;
-                    
                 }
-                .bordermenu3{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 600ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
-                    
+                @for $i from 1 through 9{
+                    .bordermenu#{$i}{
+                        animation-duration: 400ms*$i;
+                        
+                    }
                 }
-                .bordermenu4{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 800ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;    
-                }
-                .bordermenu5{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1000ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1; 
-                }
-                .bordermenu6{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1200ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1; 
-                }
-                .bordermenu7{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1400ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;   
-                }
-                .bordermenu8{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1600ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;  
-                }
-                .bordermenu9{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1800ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
-                }
-                .bordermenu10{
-                    @include menus;
-                    animation-name:SlideInBottom;
-                    animation-duration: 1800ms;
-                    animation-timing-function: linear;
-                    animation-iteration-count: 1;
-                }
-
                 @keyframes SlideInBottom {
                     0%{
                         opacity: 0;
                     }
-                    40%{
+                    60%{
                         opacity: 0;
                         transform: translateY(10%);
                     }
@@ -662,14 +548,10 @@ $green: #99E2D0;
                     }
                 }
             }
-            .boxcommands{
-                display: flex;
-                justify-content: center;
                 .commands{
                     @include bordercommands;
                 }
             }
-        }
         }
         footer{
             .boxfooter{
