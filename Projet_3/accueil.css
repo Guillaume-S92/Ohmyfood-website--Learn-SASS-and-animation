@@ -1,18 +1,11 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @font-face {
   font-family: 'Roboto';
   src: url(./Polices/Roboto/Roboto-Regular.ttf);
   font-family: 'Shrikhand';
   src: url(./Polices/Shrikhand/Shrikhand-Regular.ttf);
-}
-
-.box {
-  box-sizing: border-box;
-  /* Opera/IE 8+ */
-  -moz-box-sizing: border-box;
-  /* Firefox, autres Gecko */
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, autres WebKit */
 }
 
 @media screen and (min-width: 901px) {
@@ -161,8 +154,13 @@
     background-color: rgba(128, 128, 128, 0.144);
   }
   header .boxheader .iconheader {
-    margin-top: 1%;
     margin-right: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main .boxrestaurants {
     display: block;
@@ -257,8 +255,13 @@
   }
   main .boxfunctioning .locaterestaurant i {
     color: grey;
-    margin-top: 5%;
     margin-right: 9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main .boxnavrestaurant {
     background-color: #f7f3f3;
@@ -463,8 +466,13 @@
     background-color: rgba(128, 128, 128, 0.144);
   }
   header .boxheader .iconheader {
-    margin-top: 5%;
     margin-right: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main .boxrestaurants {
     display: block;
@@ -551,7 +559,12 @@
   }
   main .boxfunctioning .locaterestaurant i {
     color: grey;
-    margin-top: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-right: 9%;
   }
   main .boxnavrestaurant {
@@ -565,7 +578,7 @@
     font-size: 1.3em;
   }
   main .vignetterestaurant {
-    margin-left: 2em;
+    margin: auto;
     -webkit-box-shadow: 0px 1px 10px #b1b0b0;
             box-shadow: 0px 1px 10px #b1b0b0;
     border-radius: 1em;
