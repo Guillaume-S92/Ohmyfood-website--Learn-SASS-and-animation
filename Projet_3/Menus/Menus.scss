@@ -391,7 +391,6 @@ $green: #99E2D0;
             }
             .recipe{
                 width: 60vw;
-                overflow: hidden;
             }
         }
         .sides{
@@ -421,11 +420,11 @@ $green: #99E2D0;
                     padding-top: 0.5em;
                     line-height: 0em;
                     font-size: 0.8em;
-                    transition:transform 400ms linear;
+                    transition:transform 1s linear;
                     font-family: 'Roboto';
                 }    
                 .checkicon{
-                    transition: all 400ms ease-in-out;
+                    transition: all 1s ease-in-out;
                     transform-origin: right;
                     background-color:#99E2D0;
                     width: 0em;
@@ -435,7 +434,7 @@ $green: #99E2D0;
                     i{
                         color: white;
                         font-size:1.2em;
-                        transition: transform 400ms linear, 400ms ease-in-out;
+                        transition: transform 1s linear, 1s ease-in-out;
                         position: relative;
                         left: 1.5em;
                     }

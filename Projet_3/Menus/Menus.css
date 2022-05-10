@@ -412,15 +412,15 @@
     padding-top: 0.5em;
     line-height: 0em;
     font-size: 0.8em;
-    -webkit-transition: -webkit-transform 400ms linear;
-    transition: -webkit-transform 400ms linear;
-    transition: transform 400ms linear;
-    transition: transform 400ms linear, -webkit-transform 400ms linear;
+    -webkit-transition: -webkit-transform 1s linear;
+    transition: -webkit-transform 1s linear;
+    transition: transform 1s linear;
+    transition: transform 1s linear, -webkit-transform 1s linear;
     font-family: 'Roboto';
   }
   .boxicon .checkicon {
-    -webkit-transition: all 400ms ease-in-out;
-    transition: all 400ms ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
     -webkit-transform-origin: right;
             transform-origin: right;
     background-color: #99E2D0;
@@ -436,10 +436,10 @@
   .boxicon .checkicon i {
     color: white;
     font-size: 1.2em;
-    -webkit-transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: 400ms ease-in-out, -webkit-transform 400ms linear;
-    transition: transform 400ms linear, 400ms ease-in-out;
-    transition: transform 400ms linear, 400ms ease-in-out, -webkit-transform 400ms linear;
+    -webkit-transition: 1s ease-in-out, -webkit-transform 1s linear;
+    transition: 1s ease-in-out, -webkit-transform 1s linear;
+    transition: transform 1s linear, 1s ease-in-out;
+    transition: transform 1s linear, 1s ease-in-out, -webkit-transform 1s linear;
     position: relative;
     left: 1.5em;
   }
@@ -620,7 +620,6 @@
   }
   main .boxmenu .boxplats .bordermenu:hover .recipe {
     width: 60vw;
-    overflow: hidden;
   }
   main .boxmenu .boxplats .bordermenu .sides {
     padding-bottom: 10px;
