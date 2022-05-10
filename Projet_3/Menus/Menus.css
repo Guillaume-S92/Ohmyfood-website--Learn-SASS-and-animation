@@ -239,7 +239,7 @@
     left: 1.5em;
   }
   main .boxmenu .boxplats .bordermenu:hover .recipe {
-    width: 400px;
+    width: 450px;
   }
   main .boxmenu .boxplats .bordermenu span {
     font-weight: bold;
@@ -620,6 +620,7 @@
   }
   main .boxmenu .boxplats .bordermenu:hover .recipe {
     width: 60vw;
+    overflow: hidden;
   }
   main .boxmenu .boxplats .bordermenu .sides {
     padding-bottom: 10px;
@@ -773,4 +774,4 @@
     margin-left: -0.2em;
   }
 }
-/*# sourceMappingURL=La_palette_du_goût.css.map */
+/*# sourceMappingURL=Menus.css.map */
