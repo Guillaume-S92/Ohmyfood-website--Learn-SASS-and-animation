@@ -44,10 +44,10 @@
   .boxicon .checkicon i {
     color: white;
     font-size: 1.2em;
-    -webkit-transition: 2s ease-in-out, -webkit-transform 1s linear;
-    transition: 2s ease-in-out, -webkit-transform 1s linear;
-    transition: transform 1s linear, 2s ease-in-out;
-    transition: transform 1s linear, 2s ease-in-out, -webkit-transform 1s linear;
+    -webkit-transition: -webkit-transform 1s linear;
+    transition: -webkit-transform 1s linear;
+    transition: transform 1s linear;
+    transition: transform 1s linear, -webkit-transform 1s linear;
     position: relative;
     left: 1.5em;
   }
@@ -70,12 +70,15 @@
   header .boxheader h1 {
     font-family: 'Shrikhand';
     margin-left: 2%;
+    margin-right: 1em;
   }
-  header .boxheader i {
-    position: relative;
-    top: 50%;
-    font-size: 1.4em;
+  header i {
+    font-size: 1.5em;
     color: black;
+    position: relative;
+    top: 2.2em;
+    float: left;
+    margin-left: 1em;
   }
   main .boximg {
     width: 100%;
@@ -238,8 +241,8 @@
     position: relative;
     left: 1.5em;
   }
-  main .boxmenu .boxplats .bordermenu:hover .recipe {
-    width: 450px;
+  main .boxmenu .boxplats .bordermenu .recipe {
+    overflow: hidden;
   }
   main .boxmenu .boxplats .bordermenu span {
     font-weight: bold;
@@ -452,18 +455,21 @@
     display: -ms-flexbox;
     display: flex;
     height: 4.5em;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   header .boxheader h1 {
     font-family: 'Shrikhand';
-    margin-right: 2em;
-  }
-  header .boxheader i {
-    margin-top: 1.3em;
     margin-right: 1em;
+  }
+  header i {
+    float: left;
     font-size: 1.4em;
     color: black;
+    position: relative;
+    top: 1.5em;
+    margin-left: 1em;
   }
   main .boximg {
     width: 100%;
@@ -517,10 +523,10 @@
   main .boxmenu .restauranttitle .like i:nth-child(2) {
     display: none;
   }
-  main .boxmenu .restauranttitle .like:hover i:nth-child(1) {
+  main .boxmenu .restauranttitle .like:active i:nth-child(1) {
     display: none;
   }
-  main .boxmenu .restauranttitle .like:hover i:nth-child(2) {
+  main .boxmenu .restauranttitle .like:active i:nth-child(2) {
     display: block;
     -webkit-animation: fill 1s;
             animation: fill 1s;
@@ -588,12 +594,12 @@
     -webkit-animation-iteration-count: 1;
             animation-iteration-count: 1;
   }
-  main .boxmenu .boxplats .bordermenu:hover {
+  main .boxmenu .boxplats .bordermenu:active {
     background-color: white;
     -webkit-box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
   }
-  main .boxmenu .boxplats .bordermenu:hover .checkicon {
+  main .boxmenu .boxplats .bordermenu:active .checkicon {
     background-color: #99E2D0;
     color: white;
     display: -webkit-box;
@@ -607,19 +613,19 @@
     margin-top: 0em;
     width: 3em;
   }
-  main .boxmenu .boxplats .bordermenu:hover .checkicon i {
+  main .boxmenu .boxplats .bordermenu:active .checkicon i {
     color: white;
     -webkit-transform: translateX(-0.8em) rotate(360deg);
             transform: translateX(-0.8em) rotate(360deg);
     position: relative;
     left: 1.5em;
   }
-  main .boxmenu .boxplats .bordermenu:hover .price {
-    -webkit-transform: translateX(-1.5em);
-            transform: translateX(-1.5em);
+  main .boxmenu .boxplats .bordermenu:active .price {
+    padding-right: 1em;
+    padding-left: 1em;
   }
-  main .boxmenu .boxplats .bordermenu:hover .recipe {
-    width: 60vw;
+  main .boxmenu .boxplats .bordermenu .recipe {
+    overflow: hidden;
   }
   main .boxmenu .boxplats .bordermenu .sides {
     padding-bottom: 10px;
@@ -708,11 +714,17 @@
       opacity: 1;
     }
   }
-  main .boxmenu .commands {
+  main .boxmenu .boxcommands {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .boxmenu .boxcommands .commands {
     position: relative;
     bottom: -3.7em;
-    margin-left: 25vw;
-    margin-top: 4em;
     padding-top: 1em;
     padding-bottom: 1em;
     padding-right: 3.5em;
@@ -735,7 +747,7 @@
     font-weight: bold;
     font-family: 'Roboto';
   }
-  main .boxmenu .commands:hover {
+  main .boxmenu .boxcommands .commands:hover {
     background: -webkit-gradient(linear, left top, right bottom, from(#ff79d9dc), to(#9256dce1));
     background: linear-gradient(to bottom right, #ff79d9dc, #9256dce1);
     -webkit-box-shadow: 0px 10px 10px #b1b0b0;
