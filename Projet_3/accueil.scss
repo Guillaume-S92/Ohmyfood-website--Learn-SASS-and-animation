@@ -49,11 +49,6 @@ font-weight: bold;
 
 
 
-html{
-    font-size: 1vw;
-    height: 100vh;
-}
-
 
     .parent__spinner{
         position: absolute;
@@ -63,7 +58,7 @@ html{
         right: 0;
         background-color: white;
         z-index: 1000;
-        height: 170%;
+        height: 200%;
         width: 100%;
         opacity:1;
         animation: fade;
@@ -127,11 +122,17 @@ html{
                 overflow:visible;
                }
                }
+
+
 body {
-        animation: monanim;
-        animation-duration: 3s;
         margin: 0%;
+        font-size: 1vw;
         }
+
+.container{
+    animation: monanim;
+    animation-duration: 3s;
+}
           
              
     header{

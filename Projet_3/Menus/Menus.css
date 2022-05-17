@@ -32,7 +32,7 @@
     -webkit-transform-origin: right;
             transform-origin: right;
     background-color: #99E2D0;
-    width: 0em;
+    width: 3em;
     border-radius: 0em 0.7em 0.7em 0em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,16 +40,12 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-right: -3em;
   }
   .boxicon .checkicon i {
     color: white;
     font-size: 1.2em;
-    -webkit-transition: -webkit-transform 1s linear;
-    transition: -webkit-transform 1s linear;
-    transition: transform 1s linear;
-    transition: transform 1s linear, -webkit-transform 1s linear;
-    position: relative;
-    left: 1.5em;
+    margin-left: 0.7em;
   }
   html {
     font-size: 1vw;
@@ -232,14 +228,33 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-right: 0em;
   }
   main .boxmenu .boxplats .bordermenu:hover .checkicon i {
     color: white;
     font-size: 1.2em;
-    -webkit-transform: translateX(-0.8em) rotate(360deg);
-            transform: translateX(-0.8em) rotate(360deg);
-    position: relative;
-    left: 1.5em;
+    -webkit-animation: spin 1s;
+            animation: spin 1s;
+  }
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+    }
+  }
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+    }
   }
   main .boxmenu .boxplats .bordermenu .recipe {
     overflow: hidden;
