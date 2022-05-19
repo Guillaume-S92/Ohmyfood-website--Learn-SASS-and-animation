@@ -51,14 +51,14 @@ font-weight: bold;
 
 
     .parent__spinner{
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         background-color: white;
         z-index: 1000;
-        height: 200%;
+        height: 100vh;
         width: 100%;
         opacity:1;
         animation: fade;
@@ -320,7 +320,7 @@ body {
                     }
     
                     .like{
-                        padding-right: 1em;
+                        
                         .fa-solid{
                             color: transparent;
                             background-clip: text;
@@ -328,22 +328,20 @@ body {
                         }
                     }
                     .like i:nth-child(2){
-                        display:none;
+                        width: 0%;
                     }
                     
                     .like:hover i:nth-child(1){
-                        display: none;
+                        width: 0%;
                     }
                     .like:hover i:nth-child(2){
-                        display: block;
                         animation: fill 1s;
-                        transform-origin: bottom;
                         @keyframes fill {
                             0%{
-                                transform: scaleY(0);
+                                width: 0%;
                             }
                             100%{
-                                transform: scaleY(1)
+                                width: 100%;
                             }
                         }  
                     }
@@ -588,7 +586,7 @@ main{
             .heart{
                 display: flex;
                 justify-content: space-between;
-                margin-right: 2em;
+                
                 .infosvignette{
                     display: flex;
                     flex-direction: column;
@@ -616,22 +614,20 @@ main{
                     }
                 }
                 .like i:nth-child(2){
-                    display:none;
+                    width: 0%;
                 }
                 
                 .like:active i:nth-child(1){
-                    display: none;
+                    width: 0%;
                 }
                 .like:active i:nth-child(2){
-                    display: block;
                     animation: fill 1s;
-                    transform-origin: bottom;
                     @keyframes fill {
                         0%{
-                            transform: scaleY(0);
+                            width: 0%;
                         }
                         100%{
-                            transform: scaleY(1)
+                            width: 100%;
                         }
                     }  
                 }

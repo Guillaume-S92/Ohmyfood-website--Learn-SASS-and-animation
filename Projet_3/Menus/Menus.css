@@ -27,8 +27,8 @@
     font-family: 'roboto';
   }
   .boxicon .checkicon {
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    transition: all 600ms ease-in-out;
     -webkit-transform-origin: right;
             transform-origin: right;
     background-color: #99E2D0;
@@ -113,11 +113,19 @@
   }
   main .boxmenu .restauranttitle i {
     font-size: 1.5em;
-    margin-top: 1.2em;
     color: black;
   }
   main .boxmenu .restauranttitle a {
     text-decoration: none;
+  }
+  main .boxmenu .restauranttitle .like {
+    margin-top: 1.7em;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   main .boxmenu .restauranttitle .like .fa-solid {
     color: transparent;
@@ -127,36 +135,31 @@
   }
   main .boxmenu .restauranttitle .like i:nth-child(2) {
     width: 0%;
+    position: relative;
   }
   main .boxmenu .restauranttitle .like:hover i:nth-child(1) {
     width: 0%;
-    opacity: 0;
+    position: absolute;
   }
   main .boxmenu .restauranttitle .like:hover i:nth-child(2) {
     width: 100%;
     -webkit-animation: fill 1s ease-in-out;
             animation: fill 1s ease-in-out;
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
   }
   @-webkit-keyframes fill {
     0% {
-      -webkit-transform: scaleY(0);
-              transform: scaleY(0);
+      width: 0%;
     }
     100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
+      width: 100%;
     }
   }
   @keyframes fill {
     0% {
-      -webkit-transform: scaleY(0);
-              transform: scaleY(0);
+      width: 0%;
     }
     100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
+      width: 100%;
     }
   }
   main .boxmenu .boxplats {
@@ -233,8 +236,8 @@
   main .boxmenu .boxplats .bordermenu:hover .checkicon i {
     color: white;
     font-size: 1.2em;
-    -webkit-animation: spin 1s;
-            animation: spin 1s;
+    -webkit-animation: spin 1300ms;
+            animation: spin 1300ms;
   }
   @-webkit-keyframes spin {
     from {
@@ -273,7 +276,8 @@
   main .boxmenu .boxplats .bordermenu p {
     padding-top: 0.4em;
     font-family: 'Roboto';
-    margin-top: 0.5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
     margin-left: 0.5em;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -437,12 +441,12 @@
     font-family: 'Roboto';
   }
   .boxicon .checkicon {
-    -webkit-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
+    -webkit-transition: all 600ms ease-in-out;
+    transition: all 600ms ease-in-out;
     -webkit-transform-origin: right;
             transform-origin: right;
     background-color: #99E2D0;
-    width: 0em;
+    width: 3em;
     border-radius: 0em 0.7em 0.7em 0em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -450,16 +454,12 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-right: -3em;
   }
   .boxicon .checkicon i {
     color: white;
     font-size: 1.2em;
-    -webkit-transition: 1s ease-in-out, -webkit-transform 1s linear;
-    transition: 1s ease-in-out, -webkit-transform 1s linear;
-    transition: transform 1s linear, 1s ease-in-out;
-    transition: transform 1s linear, 1s ease-in-out, -webkit-transform 1s linear;
-    position: relative;
-    left: 1.5em;
+    margin-left: 0.8em;
   }
   body {
     margin: 0%;
@@ -512,7 +512,6 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-left: 1em;
     margin-top: 0em;
     margin-bottom: 0em;
   }
@@ -522,12 +521,18 @@
   }
   main .boxmenu .restauranttitle i {
     font-size: 1.5em;
-    margin-top: 1em;
-    margin-right: 2em;
     color: black;
   }
   main .boxmenu .restauranttitle a {
     text-decoration: none;
+  }
+  main .boxmenu .restauranttitle .like {
+    margin-top: 1.4em;
+    margin-right: 2em;
+    width: 6%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   main .boxmenu .restauranttitle .like .fa-solid {
     color: transparent;
@@ -536,36 +541,32 @@
     background-image: linear-gradient(#9356DC, #FF79DA);
   }
   main .boxmenu .restauranttitle .like i:nth-child(2) {
-    display: none;
+    width: 0%;
+    position: relative;
   }
   main .boxmenu .restauranttitle .like:active i:nth-child(1) {
-    display: none;
+    width: 0%;
+    position: absolute;
   }
   main .boxmenu .restauranttitle .like:active i:nth-child(2) {
-    display: block;
-    -webkit-animation: fill 1s;
-            animation: fill 1s;
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
+    width: 100%;
+    -webkit-animation: fill 1s ease-in-out;
+            animation: fill 1s ease-in-out;
   }
   @-webkit-keyframes fill {
     0% {
-      -webkit-transform: scaleY(0);
-              transform: scaleY(0);
+      width: 0%;
     }
     100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
+      width: 100%;
     }
   }
   @keyframes fill {
     0% {
-      -webkit-transform: scaleY(0);
-              transform: scaleY(0);
+      width: 0%;
     }
     100% {
-      -webkit-transform: scaleY(1);
-              transform: scaleY(1);
+      width: 100%;
     }
   }
   main .boxmenu .boxplats {
@@ -616,24 +617,40 @@
   }
   main .boxmenu .boxplats .bordermenu:active .checkicon {
     background-color: #99E2D0;
-    color: white;
+    border-radius: 0em 0.7em 0.7em 0em;
+    width: 3em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    font-size: 1.2em;
-    border-radius: 0em 0.7em 0.7em 0em;
-    margin-top: 0em;
-    width: 3em;
+    margin-right: 0em;
   }
   main .boxmenu .boxplats .bordermenu:active .checkicon i {
     color: white;
-    -webkit-transform: translateX(-0.8em) rotate(360deg);
-            transform: translateX(-0.8em) rotate(360deg);
-    position: relative;
-    left: 1.5em;
+    -webkit-animation: spin 800ms;
+            animation: spin 800ms;
+  }
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+    }
+  }
+  @keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(-360deg);
+              transform: rotate(-360deg);
+    }
   }
   main .boxmenu .boxplats .bordermenu:active .price {
     padding-right: 1em;

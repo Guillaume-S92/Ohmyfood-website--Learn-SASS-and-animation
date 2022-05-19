@@ -63,7 +63,7 @@ $green: #99E2D0;
                 i{
                     color: white;
                     font-size: 1.2em;
-                    animation: spin 1s;
+                    animation: spin 1300ms;
                 }
                 @keyframes spin { 
                     from { 
@@ -92,7 +92,8 @@ $green: #99E2D0;
         p{  
             padding-top: 0.4em;
             font-family: 'Roboto';
-            margin-top: 0.5em;
+            margin-top: 0em;
+            margin-bottom:0em;
             margin-left: 0.5em;
             text-overflow: ellipsis;
             overflow:hidden;
@@ -114,7 +115,7 @@ $green: #99E2D0;
                     font-family: 'roboto';
                 }        
                 .checkicon{
-                    transition: all 1s ease-in-out;
+                    transition: all 600ms ease-in-out;
                     transform-origin: right;
                     background-color:#99E2D0;
                     width: 3em;
@@ -196,7 +197,6 @@ $green: #99E2D0;
                     }
                     i{
                         font-size: 1.5em;
-                        margin-top: 1.2em;
                         
                         color: black;
                     }
@@ -204,32 +204,36 @@ $green: #99E2D0;
                         text-decoration: none;
                     }
                     .like{
+                        margin-top: 1.7em;
+                        width: fit-content;
+                        height: fit-content;
                         .fa-solid{
                             color: transparent;
                             background-clip: text;
                             background-image: linear-gradient( $purple, $pink);
-
+                            
                         }
                     }
                     .like i:nth-child(2){
                         width: 0%;
+                        position: relative;
                     }
                     
                     .like:hover i:nth-child(1){
                         width: 0%;
-                        opacity: 0;
+                        position: absolute;
                     }
+
                     .like:hover i:nth-child(2){
                         width: 100%;
                         animation: fill 1s ease-in-out;
-                        transform-origin: bottom;
                         @keyframes fill {
                             0%{
-                                transform: scaleY(0);
+                                width: 0%;
                                 
                             }
                             100%{
-                                transform: scaleY(1);
+                                width: 100%;
                             }
                         }  
                     }
@@ -378,18 +382,22 @@ $green: #99E2D0;
                 box-shadow: 0px 10px 10px rgba(177, 176, 176, 0.342);
             .checkicon{
                 background-color: $green;
-                color:white;
+                border-radius: 0em 0.7em 0.7em 0em;
+                width: 3em;
                 display: flex;
                 align-items: center;
-                font-size: 1.2em;
-                border-radius: 0em 0.7em 0.7em 0em;
-                margin-top: 0em;
-                width: 3em;
+                margin-right: 0em;
                 i{
                     color: white;
-                    transform:translateX(-0.8em) rotate(360deg);
-                    position: relative;
-                    left: 1.5em;
+                    animation: spin 800ms;
+                }
+                @keyframes spin {
+                    from{
+                        transform:rotate(0deg);
+                    }
+                    to{
+                        transform:rotate(-360deg);
+                    }
                 }
             }
             .price{
@@ -431,19 +439,18 @@ $green: #99E2D0;
                     font-family: 'Roboto';
                 }    
                 .checkicon{
-                    transition: all 1s ease-in-out;
+                    transition: all 600ms ease-in-out;
                     transform-origin: right;
                     background-color:#99E2D0;
-                    width: 0em;
+                    width: 3em;
                     border-radius: 0em 0.7em 0.7em 0em;
                     display: flex;
                     align-items: center;
+                    margin-right: -3em;
                     i{
                         color: white;
                         font-size:1.2em;
-                        transition: transform 1s linear, 1s ease-in-out;
-                        position: relative;
-                        left: 1.5em;
+                        margin-left:0.8em;
                     }
                 }
 
@@ -497,7 +504,7 @@ $green: #99E2D0;
             .restauranttitle{
                 display: flex;
                 justify-content: space-between;
-                margin-left: 1em;
+                
                 margin-top:0em;
                 margin-bottom: 0em;
                 h1{
@@ -506,38 +513,43 @@ $green: #99E2D0;
                 }
                 i{
                     font-size: 1.5em;
-                    margin-top: 1em;
-                    margin-right: 2em;
                     color: black;
                 }
                 a{
                     text-decoration: none;
                 }
                 .like{
+                    margin-top: 1.4em;
+                    margin-right: 2em;
+                    width: 6%;
+                    height: fit-content;
                     .fa-solid{
                         color: transparent;
                         background-clip: text;
                         background-image: linear-gradient( $purple, $pink);
-
+                        
                     }
                 }
                 .like i:nth-child(2){
-                    display:none;
+                    width: 0%;
+                    position: relative;
                 }
                 
                 .like:active i:nth-child(1){
-                    display: none;
+                    width: 0%;
+                   position: absolute;
                 }
+
                 .like:active i:nth-child(2){
-                    display: block;
-                    animation: fill 1s;
-                    transform-origin: bottom;
+                    width: 100%;
+                    animation: fill 1s ease-in-out;
                     @keyframes fill {
                         0%{
-                            transform: scaleY(0);
+                            width: 0%;
+                            
                         }
                         100%{
-                            transform: scaleY(1)
+                            width: 100%;
                         }
                     }  
                 }
