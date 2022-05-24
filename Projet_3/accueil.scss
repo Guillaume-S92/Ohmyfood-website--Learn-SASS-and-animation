@@ -426,8 +426,86 @@ color: black;
 font-weight: bold;
 }
 
+.parent__spinner{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    opacity:1;
+    animation: fade;
+    animation-duration: 0s;
+    animation-delay:3s;
+    animation-fill-mode: forwards;
+    }
+
+.loading__spiner {
+    /*Création du loader*/
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid $purple;
+    border-bottom:10px solid $pink;
+    border-radius: 50%;
+    width: 6.25em;
+    height: 6.25em;
+   /* -webkit-animation: spin 1.5s linear infinite;
+    -o-animation: spin 1.5s linear infinite;*/
+    animation-name:spin;
+    animation-timing-function: linear;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    /*positionnement du loader*/
+    margin: auto;
+    position: fixed;
+    top:0; left : 0; right: 0; bottom: 0;
+    }
+
+        /*Animation du loader*/
+        @keyframes spin {
+            0% {
+              transform: rotate(0deg);
+              visibility:visible;
+            }
+            to {
+              transform: rotate(360deg);
+              visibility:hidden;
+                        
+          }
+         }
+         @keyframes fade {
+            from{
+              opacity:1;
+              display: block;
+            }
+            to{
+              opacity:0;
+              z-index:-100;
+              display:none;
+              height:0;
+              width:0;
+              display: none;
+            }
+             }
+           
+           @keyframes monanim {
+           from{
+            overflow:hidden;
+           }
+           to{
+            overflow:visible;
+           }
+           }
+
 body{
 margin:0%;
+}
+
+.container{
+    animation: monanim;
+    animation-duration: 3s;
 }
 
 header{
