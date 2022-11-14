@@ -38,3 +38,6 @@ Boutons
    - CSS3
    - SASS
    - Le développement devra se faire en CSS, sans JavaScript
+   
+# Résultat  
+Site consutable [ici](https://raw.githack.com/Guillaume-S92/Project_3/main/Projet_3/accueil.html)
